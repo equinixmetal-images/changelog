@@ -19,7 +19,7 @@
 * [10](debian/10)
 * [11](debian/11)
 
-## Rhel(https://github.com/packethost/image-rhel)
+## [Rhel](https://github.com/packethost/image-rhel)
 
 * [8](rhel/8)
 
