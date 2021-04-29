@@ -6,7 +6,7 @@ Images are kept as close to upstream releases as possible.
 
 # Changelog
 
-The changelog aims to show what packages are included, what kernel and what deviations from upstream (if any) per new published image.
+The changelog aims to show what packages have changed since the last published image, what kernel and what deviations from upstream (if any) per new published image.
 
 If there is any information that would be helpful but is missing from the changelog, [please raise an issue](https://github.com/packethost/metal-images-changelog/issues/new) and we will do our best to add it going forward.
 
