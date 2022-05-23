@@ -1,0 +1,52 @@
+Image information
+
+    Edition: Windows Server 2019 Standard
+    Filename: equinixmetal-2k19std-from-golden_15_04_2022_27.raw.tar.gz
+    Size: 6.56 GB
+    SHA1: 82DE1F43301274DA9B4999C128CD47F409C62696
+
+Software and Driver versions:
+    Cloudbase-init version: 1.1.3.0
+    Drivers and version: 
+        Product: Intel(R) Chipset Device Software -> version: 3.1.7.121
+        Intel C62x/C240 Series Chipset Drivers -> version: 10.1.18243.8188
+        Intel NIC Family -> version 20.0.0
+        Mellanox drivers for Mellanox ConnectX-4 Lx, ConnectX-4,  ConnectX-5 and ConnectX-6  Ethernet adapters -> version 02.050.02
+        Windows Server 2019 Driver for Dell 12Gbps HBA and HBA330, A00 -> version 2.51.25.02
+        Microsoft Windows x64 management driver for BOSS -> version 1.2.0.1051, A01
+        HPE Smart Array Gen10 Controller Driver -> version 2.0.1.0
+        Intel(R) Ethernet Gigabit Adapters and Connections -> version 12.15.31.4
+        Intel(R) Ethernet 40GbE Adapters and Connections -> version 12.15.31.4
+        Intel(R) Management Engine Firmware -> version 9.0.0.1323
+        Mellanox InfiniBand and Ethernet Driver for Microsoft Windows Server 2012 R2 -> version 5.10.50000
+        Mellanox InfiniBand and Ethernet Driver for Microsoft Windows Server 2016 -> version 5.50.52000
+        Mellanox InfiniBand and Ethernet Driver for Microsoft Windows Server 2019 -> version 5.50.52000
+        Mellanox ConnectX-4 WinOF-2 (Ethernet only) driver for Microsoft Windows Server 2016 -> version 1.60
+        Mellanox ConnectX-4 and ConnectX-5 WinOF-2 InfiniBand and Ethernet Driver for Microsoft Windows Server 2012 -> version 	2.30
+        IonicMini -> version 1.8.0.5527
+        Dell HBA330 Mini Driver -> version 2.51.24.80
+        Intel Family of Server Adapter Drivers -> version 10.1.18243.8188
+        Intel NIC Family -> version 19.5.0
+        Driver for Marvell Unify Configuration -> version 1.2.0.1051
+        Intel driver for E810 network cards -> version 1.9.65.0
+
+Customizations:
+    - power plan set to high performance
+    - enabled SAC
+
+System Requirements: please refer to Microsoft documentation -> https://docs.microsoft.com/en-us/windows-server/get-started/hardware-requirements"
+
+Windows updates
+    Number of installed updates: 5
+    List of KB updates: KB5012128 KB4535680 KB4589208 KB5012647 KB5011574
+
+Other details:
+    RDP port: 3389
+    windows password requirements
+    - password expires in 24 hours
+    Be at least eight characters in length.
+    Contain characters from three of the following four categories:
+    English uppercase characters (A through Z).
+    English lowercase characters (a through z).
+    Base 10 digits (0 through 9).
+    Non-alphabetic characters (for example, !, $, #, %).
