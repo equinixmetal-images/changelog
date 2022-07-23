@@ -1,0 +1,9 @@
+name: Apply Labels
+on: [pull_request]
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/labeler@v4
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
