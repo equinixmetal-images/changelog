@@ -1,19 +1,18 @@
-
 # Equinix Metal published images
 
 Equinix Metal publishes images on the platform that have been built with the fleet's requirements in mind. These images are tested/validated against the fleet and are known to work with our metal. For most operating systems we publish fresh images on monthly basis, this guarantees a smooth user experience and reduces install times.
 
-Images are kept as close to upstream releases as possible.
+Images are kept as close to upstream releases as possible. It is not always possible (for a number of reasons) for us to publish a full changelog for every operating system which can be provisioned on our platform, but we strive to keep this changelog as comprehensive and up to date as possible.
 
 # Changelog
 
 The changelog aims to show what packages have changed since the last published image, what kernel and what deviations from upstream (if any) per new published image.
 
-If there is any information that would be helpful but is missing from the changelog, [please raise an issue](https://github.com/packethost/metal-images-changelog/issues/new) and we will do our best to add it going forward.
+If there is any information that would be helpful but is missing from the changelog, [please raise an issue](https://github.com/equinixmetal-images/changelog/issues/new) and we will do our best to add it going forward.
 
-# Equinix Metal (EM) OS Schedule
+# Equinix Metal Operating System Support Schedule
 
-This is the list with latest details on the OSs Equinix Metal repackages and publishes for customers. Please, note that certain OSs, when they are approaching EOL (End Of Life) upstream, may not be supported in the newest hardware due to driver issues.
+This is the list with latest details on the OSs Equinix Metal repackages and publishes for customers. Please, note that certain OSs, when they are approaching EOL (End Of Life) upstream, may not be supported in the newest hardware due to driver or other compatibility issues.
 
 | OS         | Version | Upstream EOL | EM Estimated EOL |  Changelog | Notes |
 | ---        | --- | --- | --- | --- | --- |

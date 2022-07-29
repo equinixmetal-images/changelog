@@ -1,0 +1,16 @@
+alma:
+  - "alma/**"
+alpine:
+  - "alpine/**"
+centos:
+  - "centos/**"
+debian:
+  - "debian/**"
+rhel:
+  - "rhel/**"
+rocky:
+  - "rocky/**"
+ubuntu:
+  - "ubuntu/**"
+windows:
+  - "windows/**"
