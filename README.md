@@ -29,9 +29,8 @@ This is the list with latest details on the OSs Equinix Metal repackages and pub
 | Rocky Linux     | 8     | May, 2024 | Feb, 2024  | [x86_64](rocky/x86_64/8.md) [arm64](rocky/aarch64/8.md) | |
 | Alpine     | 3     | Nov, 2023 | Aug, 2023 | [x86_64](alpine/x86_64/3.md) [arm64](alpine/aarch64/3.md) | |
 | Nixos      | 21.11 | Dec, 2021 | TBD  | TBD | |
-| VMware     | 6.7   | Oct, 2022 | Aug, 2022  | N/A | Not available on latest HW. |
-| VMware     | 7.0   | Apr, 2025 | Jan, 2025  | TBD | |
-| VMware VCF | 7.0   | Apr, 2025 | Jan, 2025  | TBD | |
+| VMware ESXi    | 6.7   | Oct, 2022 | Aug, 2022  | N/A | Not available on latest HW. |
+| VMware ESXi    | 7.0   | Apr, 2025 | Jan, 2025  | TBD | |
 | Windows    | 2022  | Oct, 2026 |  | [x86_64](windows/x86_64/2022.md) | |
 | Windows    | 2019  | Jan, 2024 | Sept, 2023  | [x86_64](windows/x86_64/2019.md) | |
 | Talos      | 1.2   | ??? | ???  | TBD | Coming soon |
