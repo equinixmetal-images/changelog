@@ -27,7 +27,7 @@ This is the list with latest details on the OSs Equinix Metal repackages and pub
 | RedHat Enterprise Linux | 7       | N/A             | Aug, 2021        | [x86_64](rhel/x86_64/7.md)                                        |                             |
 | RedHat Enterprise Linux | 8       | May, 2024       | N/A              | [x86_64](rhel/x86_64/8.md)                                        |                             |
 | Rocky Linux             | 8       | May, 2024       | Feb, 2024        | [x86_64](rocky/x86_64/8.md) [arm64](rocky/aarch64/8.md)           |                             |
-| Talos                   | 1.2     | ???             | ???              | TBD                                                               | Coming soon                 |
+| Talos                   | 1.2.3   | Sep, 2026       | Sep, 2026        | [Changelog](talos/v1.md)                                          |                             |
 | Ubuntu                  | 18.04   | Apr, 2028       | Jan, 2028        | [x86_64](ubuntu/x86_64/18_04.md) [arm64](ubuntu/aarch64/18_04.md) |                             |
 | Ubuntu                  | 20.04   | Apr, 2030       | Jan, 2030        | [x86_64](ubuntu/x86_64/20_04.md) [arm64](ubuntu/aarch64/20_04.md) |                             |
 | Ubuntu                  | 22.04   | Apr, 2032       | Jan, 2032        | [x86_64](ubuntu/x86_64/22_04.md) [arm64](ubuntu/aarch64/22_04.md) |                             |
