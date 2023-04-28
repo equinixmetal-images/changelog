@@ -15,7 +15,7 @@ If there is any information that would be helpful but is missing from the change
 This is the list with latest details on the OSs Equinix Metal repackages and publishes for customers. Please, note that certain OSs, when they are approaching EOL (End Of Life) upstream, may not be supported in the newest hardware due to driver or other compatibility issues.
 
 | OS                      | Version | Upstream EOL  | EM Estimated EOL |  Changelog                      | Notes |
-| ---                     | ---   | ---             | ---        | ---                                                               | --- |
+| ---                     | ---   | ---             | ---        | ---                                                           | --- |
 | Ubuntu                  | 18.04 | Apr, 2028       | Jan, 2028  | [x86_64](ubuntu/x86_64/18_04.md) [arm64](ubuntu/aarch64/18_04.md) | |
 | Ubuntu                  | 20.04 | Apr, 2030       | Jan, 2030  | [x86_64](ubuntu/x86_64/20_04.md) [arm64](ubuntu/aarch64/20_04.md) | |
 | Ubuntu                  | 22.04 | Apr, 2032       | Jan, 2032  | [x86_64](ubuntu/x86_64/22_04.md) [arm64](ubuntu/aarch64/22_04.md) | |
@@ -35,9 +35,9 @@ This is the list with latest details on the OSs Equinix Metal repackages and pub
 | VMware ESXi             | 7.0   | Apr, 2025       | Jan, 2025  | TBD                                                               | |
 | Windows Server          | 2022  | Oct, 2026       |            | [x86_64](windows/x86_64/2022.md)                                  | |
 | Windows Server          | 2019  | Jan, 2024       | Sept, 2023 | [x86_64](windows/x86_64/2019.md)                                  | |
-| Talos                   | v1    | Rolling Release | N/A        | Rolling release                       | Available                 | |
+| Talos                   | v1    | Rolling Release | N/A        | [x86_64](talos/v1.md) [arm64](talos/v1.md) | Available            | |
 | Flatcar Linux           |stable | Rolling release | N/A        | Rolling release                       | Available                 | |
 | Flatcar Linux           |beta   | Rolling release | N/A        | Rolling release                       | Available                 | |
-| FreeBSD                 | 13.1  | Jul, 2025       | Jul, 2025  | [x86_64](freebsd/x86_64/13_1.md) [arm64](freebsd/arm64/13_1.md) | |
-| FreeBSD                 | 13.2  | TBD             | Upstream   | [x86_64](freebsd/x86_64/13_2.md) [arm64](freebsd/arm64/13_2.md) | |
+| FreeBSD                 | 13.1  | Jul, 2025       | Jul, 2025  | [x86_64](freebsd/x86_64/13_1.md) [arm64](freebsd/arm64/13_1.md)   | |
+| FreeBSD                 | 13.2  | TBD             | Upstream   | [x86_64](freebsd/x86_64/13_2.md) [arm64](freebsd/arm64/13_2.md)   | |
 | VyOS                    | TBD   | ???             | ???        | TBD                                   | Coming soon               | |
