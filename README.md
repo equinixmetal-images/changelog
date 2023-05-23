@@ -16,7 +16,7 @@ This is the list with latest details on the OSs Equinix Metal repackages and pub
 
 | OS                      | Version | Upstream EOL  | EM Estimated EOL |  Changelog                      | Notes |
 | ---                     | ---   | ---             | ---        | ---                                                           | --- |
-| Ubuntu                  | 18.04 | Apr, 2028       | Jan, 2028  | [x86_64](ubuntu/x86_64/18_04.md) [arm64](ubuntu/aarch64/18_04.md) | |
+| Ubuntu                  | 18.04 | 31 May, 2023    | June, 2023  | [x86_64](ubuntu/x86_64/18_04.md) [arm64](ubuntu/aarch64/18_04.md) | |
 | Ubuntu                  | 20.04 | Apr, 2030       | Jan, 2030  | [x86_64](ubuntu/x86_64/20_04.md) [arm64](ubuntu/aarch64/20_04.md) | |
 | Ubuntu                  | 22.04 | Apr, 2032       | Jan, 2032  | [x86_64](ubuntu/x86_64/22_04.md) [arm64](ubuntu/aarch64/22_04.md) | |
 | Debian                  | 10    | Jun, 2024       | Mar, 2024  | [x86_64](debian/x86_64/10.md) [arm64](debian/aarch64/10.md)       | |
@@ -40,4 +40,4 @@ This is the list with latest details on the OSs Equinix Metal repackages and pub
 | Flatcar Linux           |beta   | Rolling release | N/A        | Rolling release                       | Available                 | |
 | FreeBSD                 | 13.1  | Jul, 2025       | Jul, 2025  | [x86_64](freebsd/x86_64/13_1.md) [arm64](freebsd/arm64/13_1.md)   | |
 | FreeBSD                 | 13.2  | TBD             | Upstream   | [x86_64](freebsd/x86_64/13_2.md) [arm64](freebsd/arm64/13_2.md)   | |
-| VyOS                    | TBD   | ???             | ???        | TBD                                   | Coming soon               | |
+| VyOS                    | 1.3   | ???             | ???        | TBD                                   | Coming soon               | |
