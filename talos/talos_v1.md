@@ -99,3 +99,266 @@ ghcr.io/siderolabs/installer:v1.4.6
 registry.k8s.io/pause:3.6
 ```
 
+## [Talos 1.4.1](https://github.com/siderolabs/talos/releases/tag/v1.4.1) (2023-04-27)
+
+Welcome to the v1.4.1 release of Talos!
+
+
+
+Please try out the release binaries and report any issues at
+https://github.com/siderolabs/talos/issues.
+
+### Component Updates
+
+* Linux: 6.1.25
+
+
+### Contributors
+
+* Andrey Smirnov
+* Utku Ozdemir
+* Noel Georgi
+* Nico Berlee
+
+### Changes
+<details><summary>14 commits</summary>
+<p>
+
+* siderolabs/talos@647c6b4ef release(v1.4.1): prepare release
+* siderolabs/talos@726d8d984 feat: update Linux to 6.1.25, fix virtio on arm64
+* siderolabs/talos@ab09baf3d fix: bump max inhibit delay to 20 min
+* siderolabs/talos@e94a19602 fix: udevd rules trigger
+* siderolabs/talos@0cd177524 fix: display correct number of machines on dashboard
+* siderolabs/talos@6b6e6c9c7 feat: clean up (garbage collect) system images which are not referenced
+* siderolabs/talos@254086d6d fix: support kernel userspace module loading
+* siderolabs/talos@0ef60514e feat: add startup probes to controller-manager and scheduler
+* siderolabs/talos@9ce238794 fix: do not show control plane status for workers on dashboard
+* siderolabs/talos@b92d9965f fix: allow `talosctl cp` to handle special files in `/proc`
+* siderolabs/talos@c003fce72 chore: fix container image reproducibility
+* siderolabs/talos@0a00a4ea7 fix: parse errors correctly
+* siderolabs/talos@447c73b05 test: submit verbose flag to e2e tests
+* siderolabs/talos@bf1cfe9c8 feat: show template URL in dashboard config URL tab
+</p>
+</details>
+
+### Changes from siderolabs/go-blockdevice
+<details><summary>1 commit</summary>
+<p>
+
+* siderolabs/go-blockdevice@076874a chore: resolve blockdevice symlinks
+</p>
+</details>
+
+### Changes from siderolabs/pkgs
+<details><summary>3 commits</summary>
+<p>
+
+* siderolabs/pkgs@0657493 chore: allow more than one commit per PR
+* siderolabs/pkgs@6ddcc52 feat: update Linux to 6.1.25
+* siderolabs/pkgs@a969180 feat: add multi-gen LRU kernel support
+</p>
+</details>
+
+### Dependency Changes
+
+* **github.com/siderolabs/go-blockdevice**       v0.4.4 -> v0.4.5
+* **github.com/siderolabs/pkgs**                 v1.4.1-5-ga333a84 -> v1.4.1-8-g0657493
+* **github.com/siderolabs/talos/pkg/machinery**  v1.4.0 -> v1.4.1
+
+Previous release can be found at [v1.4.0](https://github.com/siderolabs/talos/releases/tag/v1.4.0)
+
+## Images
+
+```
+ghcr.io/siderolabs/flannel:v0.21.4
+ghcr.io/siderolabs/install-cni:v1.4.0-1-g9b07505
+docker.io/coredns/coredns:1.10.1
+gcr.io/etcd-development/etcd:v3.5.8
+registry.k8s.io/kube-apiserver:v1.27.1
+registry.k8s.io/kube-controller-manager:v1.27.1
+registry.k8s.io/kube-scheduler:v1.27.1
+registry.k8s.io/kube-proxy:v1.27.1
+ghcr.io/siderolabs/kubelet:v1.27.1
+ghcr.io/siderolabs/installer:v1.4.1
+registry.k8s.io/pause:3.6
+```
+
+## [Talos 1.3.7](https://github.com/siderolabs/talos/releases/tag/v1.3.7) (2023-04-06)
+
+Welcome to the v1.3.7 release of Talos!
+
+
+
+Please try out the release binaries and report any issues at
+https://github.com/siderolabs/talos/issues.
+
+### Component Updates
+
+* Linux: 5.15.106
+* containerd: 1.6.20
+* runc: 1.1.5
+* Kubernetes: v1.26.3
+
+Talos is built with Go 1.19.8.
+
+
+### Contributors
+
+* Andrey Smirnov
+* Dmitriy Matrenichev
+
+### Changes
+<details><summary>8 commits</summary>
+<p>
+
+* siderolabs/talos@d17c9ee82 release(v1.3.7): prepare release
+* siderolabs/talos@fe76c56fe fix: correctly parse static pod phase
+* siderolabs/talos@dc001d28f fix: output of `talosctl logs` might be corruped
+* siderolabs/talos@422e30a2f fix: always shutdown maintenance API service
+* siderolabs/talos@19f7f7f39 feat: update Kubernetes to 1.26.3
+* siderolabs/talos@13456dab3 fix: use 'no block' etcd dial with multiple endpoints
+* siderolabs/talos@93dfa86d7 fix: nil pointer exception in syncLink
+* siderolabs/talos@34677b931 feat: update Go 1.19.8, Linux 5.15.106
+</p>
+</details>
+
+### Changes from siderolabs/extras
+<details><summary>1 commit</summary>
+<p>
+
+* siderolabs/extras@75d687a chore: update Go to 1.19.8
+</p>
+</details>
+
+### Changes from siderolabs/pkgs
+<details><summary>2 commits</summary>
+<p>
+
+* siderolabs/pkgs@49b4ba8 feat: update Go 1.19.8, Linux 5.15.106
+* siderolabs/pkgs@d1b0e28 feat: containerd 1.6.20, runc 1.1.5
+</p>
+</details>
+
+### Changes from siderolabs/tools
+<details><summary>1 commit</summary>
+<p>
+
+* siderolabs/tools@9a1d3ec feat: update Go to 1.19.8
+</p>
+</details>
+
+### Dependency Changes
+
+* **github.com/siderolabs/extras**               v1.3.0-4-gcb97438 -> v1.3.0-5-g75d687a
+* **github.com/siderolabs/pkgs**                 v1.3.0-15-g3b37079 -> v1.3.0-17-g49b4ba8
+* **github.com/siderolabs/talos/pkg/machinery**  v1.3.6 -> v1.3.7
+* **github.com/siderolabs/tools**                v1.3.0-3-ge225a7e -> v1.3.0-4-g9a1d3ec
+* **k8s.io/api**                                 v0.26.2 -> v0.26.3
+* **k8s.io/apiserver**                           v0.26.2 -> v0.26.3
+* **k8s.io/client-go**                           v0.26.2 -> v0.26.3
+* **k8s.io/component-base**                      v0.26.2 -> v0.26.3
+* **k8s.io/kubectl**                             v0.26.2 -> v0.26.3
+* **k8s.io/kubelet**                             v0.26.2 -> v0.26.3
+
+Previous release can be found at [v1.3.6](https://github.com/siderolabs/talos/releases/tag/v1.3.6)
+
+## Images
+
+```
+ghcr.io/siderolabs/flannel:v0.20.2
+ghcr.io/siderolabs/install-cni:v1.3.0-5-g75d687a
+docker.io/coredns/coredns:1.10.0
+gcr.io/etcd-development/etcd:v3.5.7
+registry.k8s.io/kube-apiserver:v1.26.3
+registry.k8s.io/kube-controller-manager:v1.26.3
+registry.k8s.io/kube-scheduler:v1.26.3
+registry.k8s.io/kube-proxy:v1.26.3
+ghcr.io/siderolabs/kubelet:v1.26.3
+ghcr.io/siderolabs/installer:v1.3.7
+registry.k8s.io/pause:3.6
+```
+
+## [Talos 1.2.3](https://github.com/siderolabs/talos/releases/tag/v1.2.3) (2022-09-20)
+
+Welcome to the v1.2.3 release of Talos!
+
+
+
+Please try out the release binaries and report any issues at
+https://github.com/siderolabs/talos/issues.
+
+### Component Updates
+
+* Kubernetes: v1.25.1
+* etcd: v3.5.5
+* Linux: 5.15.68
+
+
+### Contributors
+
+* Andrey Smirnov
+* Dmitriy Matrenichev
+* Noel Georgi
+
+### Changes
+<details><summary>9 commits</summary>
+<p>
+
+* siderolabs/talos@40cb1b493 release(v1.2.3): prepare release
+* siderolabs/talos@19cb6203c chore: add ice drivers
+* siderolabs/talos@4e23aa2a7 feat: update etcd to v3.5.5
+* siderolabs/talos@4754b59ce feat: update Kubernetes to v1.25.1
+* siderolabs/talos@b00186463 chore: return InvalidArgument on invalid config in maintenance mode
+* siderolabs/talos@1d7d8d5dd fix: set etcd options consistently
+* siderolabs/talos@88861e770 chore: mark machine configuration validation failure as InvalidArgument
+* siderolabs/talos@04406b0ba chore: add output of VLANSpec encoding to tests
+* siderolabs/talos@1d522938d fix: ensure that custom Decoder gets called for netaddr.IP
+</p>
+</details>
+
+### Changes from siderolabs/pkgs
+<details><summary>1 commit</summary>
+<p>
+
+* siderolabs/pkgs@eb07d7c chore: bump kernel + enable intel ice drivers
+</p>
+</details>
+
+### Dependency Changes
+
+* **github.com/siderolabs/pkgs**     v1.2.0-10-g0f4351f -> v1.2.0-11-geb07d7c
+* **go.etcd.io/etcd/api/v3**         v3.5.4 -> v3.5.5
+* **go.etcd.io/etcd/client/pkg/v3**  v3.5.4 -> v3.5.5
+* **go.etcd.io/etcd/client/v3**      v3.5.4 -> v3.5.5
+* **go.etcd.io/etcd/etcdutl/v3**     v3.5.4 -> v3.5.5
+* **go.uber.org/atomic**             v1.9.0 -> v1.10.0
+* **go.uber.org/zap**                v1.22.0 -> v1.23.0
+* **golang.org/x/net**               3211cb980234 -> bea034e7d591
+* **golang.org/x/sync**              886fb9371eb4 -> f12130a52804
+* **golang.org/x/sys**               fbc7d0a398ab -> aba9fc2a8ff2
+* **k8s.io/api**                     v0.25.0 -> v0.25.1
+* **k8s.io/apimachinery**            v0.25.0 -> v0.25.1
+* **k8s.io/apiserver**               v0.25.0 -> v0.25.1
+* **k8s.io/client-go**               v0.25.0 -> v0.25.1
+* **k8s.io/component-base**          v0.25.0 -> v0.25.1
+* **k8s.io/cri-api**                 v0.25.0 -> v0.25.1
+* **k8s.io/kubectl**                 v0.25.0 -> v0.25.1
+* **k8s.io/kubelet**                 v0.25.0 -> v0.25.1
+
+Previous release can be found at [v1.2.2](https://github.com/siderolabs/talos/releases/tag/v1.2.2)
+
+## Images
+
+```
+ghcr.io/siderolabs/flannel:v0.19.2
+ghcr.io/siderolabs/install-cni:v1.2.0-1-g116c5a9
+docker.io/coredns/coredns:1.9.3
+gcr.io/etcd-development/etcd:v3.5.5
+k8s.gcr.io/kube-apiserver:v1.25.1
+k8s.gcr.io/kube-controller-manager:v1.25.1
+k8s.gcr.io/kube-scheduler:v1.25.1
+k8s.gcr.io/kube-proxy:v1.25.1
+ghcr.io/siderolabs/kubelet:v1.25.1
+ghcr.io/siderolabs/installer:v1.2.3
+k8s.gcr.io/pause:3.6
+```
