@@ -1,4 +1,9 @@
-# Changelog for flatcar_3602.1.2_beta
+# Changelog for flatcar_3602.1.3_beta
+ _Changes since **Beta 3602.1.2**_
+
+ #### Updates:
+ 
+ - Linux ([5.15.120](https://lwn.net/Articles/937404))# Changelog for flatcar_3602.1.2_beta
  _Changes since **Beta 3602.1.1**_
  
  #### Security fixes:
