@@ -1,4 +1,18 @@
-# Changelog for flatcar_3510.2.4_stable
+# Changelog for flatcar_3510.2.5_stable
+ _Changes since **Stable 3510.2.4**_
+ 
+ #### Security fixes:
+ 
+ - Linux ([CVE-2023-3338](https://nvd.nist.gov/vuln/detail/CVE-2023-3338), [CVE-2023-3390](https://nvd.nist.gov/vuln/detail/CVE-2023-3390))
+ 
+ #### Bug fixes:
+ 
+ - Resolved the conflicting FD usage of libselinux and systemd which caused, e.g., a systemd crash on certain watchdog interaction during shutdown (patch in systemd 252.11)
+ 
+ #### Updates:
+ 
+ - Linux ([5.15.119](https://lwn.net/Articles/936675) (includes [5.15.118](https://lwn.net/Articles/935584)))
+ - systemd ([252.11](https://github.com/systemd/systemd-stable/releases/tag/v252.11) (from 252.5))# Changelog for flatcar_3510.2.4_stable
  _Changes since **Stable 3510.2.3**_
  
  #### Security fixes:
