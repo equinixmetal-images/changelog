@@ -1,3 +1,86 @@
+# Changelog for talos_v1.4.8_stable
+## [Talos 1.4.8](https://github.com/siderolabs/talos/releases/tag/v1.4.8) (2023-08-10)
+
+Welcome to the v1.4.8 release of Talos!
+
+
+
+Please try out the release binaries and report any issues at
+https://github.com/siderolabs/talos/issues.
+
+### Component Updates
+
+Linux: 6.1.44
+
+Talos is built with Go 1.20.7.
+
+
+### Contributors
+
+* Andrey Smirnov
+* Andrey Smirnov
+
+### Changes
+<details><summary>3 commits</summary>
+<p>
+
+* siderolabs/talos@84c2961ab release(v1.4.8): prepare release
+* siderolabs/talos@371586180 chore: update Go to 1.20.7, Linux to 6.1.44
+* siderolabs/talos@85b5d1ddd fix: calculate log2i properly
+</p>
+</details>
+
+### Changes from siderolabs/extras
+<details><summary>1 commit</summary>
+<p>
+
+* siderolabs/extras@9b41398 chore: update go to 1.20.7
+</p>
+</details>
+
+### Changes from siderolabs/pkgs
+<details><summary>3 commits</summary>
+<p>
+
+* siderolabs/pkgs@13103d6 chore: update Go to 1.20.7
+* siderolabs/pkgs@782d769 feat: update Linux to 6.1.44
+* siderolabs/pkgs@11860e5 chore: enable pushing of non-free packages
+</p>
+</details>
+
+### Changes from siderolabs/tools
+<details><summary>1 commit</summary>
+<p>
+
+* siderolabs/tools@6889ef6 feat: update Go to 1.20.7
+</p>
+</details>
+
+### Dependency Changes
+
+* **github.com/siderolabs/extras**               v1.4.0-3-g2b5a1e6 -> v1.4.0-4-g9b41398
+* **github.com/siderolabs/pkgs**                 v1.4.1-16-g69266d9 -> v1.4.1-19-g13103d6
+* **github.com/siderolabs/talos/pkg/machinery**  v1.4.7 -> v1.4.8
+* **github.com/siderolabs/tools**                v1.4.0-4-g78b2dc6 -> v1.4.0-5-g6889ef6
+
+Previous release can be found at [v1.4.7](https://github.com/siderolabs/talos/releases/tag/v1.4.7)
+
+## Images
+
+```
+ghcr.io/siderolabs/flannel:v0.21.4
+ghcr.io/siderolabs/install-cni:v1.4.0-4-g9b41398
+docker.io/coredns/coredns:1.10.1
+gcr.io/etcd-development/etcd:v3.5.9
+registry.k8s.io/kube-apiserver:v1.27.4
+registry.k8s.io/kube-controller-manager:v1.27.4
+registry.k8s.io/kube-scheduler:v1.27.4
+registry.k8s.io/kube-proxy:v1.27.4
+ghcr.io/siderolabs/kubelet:v1.27.4
+ghcr.io/siderolabs/installer:v1.4.8
+registry.k8s.io/pause:3.6
+```
+
 # Changelog for talos_v1.4.7_stable
 ## [Talos 1.4.7](https://github.com/siderolabs/talos/releases/tag/v1.4.7) (2023-07-26)
 
