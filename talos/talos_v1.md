@@ -1,3 +1,73 @@
+# Changelog for talos_v1.5.1_stable
+## [Talos 1.5.1](https://github.com/siderolabs/talos/releases/tag/v1.5.1) (2023-08-22)
+
+Welcome to the v1.5.1 release of Talos!
+
+
+
+Please try out the release binaries and report any issues at
+https://github.com/siderolabs/talos/issues.
+
+### Component Updates
+
+* Linux: 6.1.46
+
+
+### Contributors
+
+* Andrey Smirnov
+* Utku Ozdemir
+
+### Changes
+<details><summary>11 commits</summary>
+<p>
+
+* siderolabs/talos@40a22cdf7 release(v1.5.1): prepare release
+* siderolabs/talos@4fd4e16c0 fix: copy proper modules to arm64 squashfs
+* siderolabs/talos@51c92e48a feat: update Linux to 6.1.46
+* siderolabs/talos@2d2b8c895 fix: prevent dashboard crashes when process info is not available
+* siderolabs/talos@a79ed5e47 fix: properly GC images supplied with both tag and digest
+* siderolabs/talos@024053a5c fix: automatically change `rpi_4` board on upgrade
+* siderolabs/talos@5c82445d2 fix: support 'List' type manifests
+* siderolabs/talos@7b36ada79 fix: use image digest when starting a container
+* siderolabs/talos@106078295 fix: ntp query error with bare IPv6 address
+* siderolabs/talos@5b1d021d5 fix: write correct capacity to the ovf
+* siderolabs/talos@3c8b0856b fix: restore compatibility with Kubernetes 1.26
+</p>
+</details>
+
+### Changes from siderolabs/pkgs
+<details><summary>1 commit</summary>
+<p>
+
+* siderolabs/pkgs@f62fa2c feat: update Linux to 6.1.46
+</p>
+</details>
+
+### Dependency Changes
+
+* **github.com/beevik/ntp**                      v1.2.0 -> v1.3.0
+* **github.com/siderolabs/pkgs**                 v1.5.0-6-g2f2c9cd -> v1.5.0-7-gf62fa2c
+* **github.com/siderolabs/talos/pkg/machinery**  v1.5.0 -> v1.5.1
+
+Previous release can be found at [v1.5.0](https://github.com/siderolabs/talos/releases/tag/v1.5.0)
+
+## Images
+
+```
+ghcr.io/siderolabs/flannel:v0.22.1
+ghcr.io/siderolabs/install-cni:v1.5.0
+registry.k8s.io/coredns/coredns:v1.10.1
+gcr.io/etcd-development/etcd:v3.5.9
+registry.k8s.io/kube-apiserver:v1.28.0
+registry.k8s.io/kube-controller-manager:v1.28.0
+registry.k8s.io/kube-scheduler:v1.28.0
+registry.k8s.io/kube-proxy:v1.28.0
+ghcr.io/siderolabs/kubelet:v1.28.0
+ghcr.io/siderolabs/installer:v1.5.1
+registry.k8s.io/pause:3.6
+```
+
 # Changelog for talos_v1.4.8_stable
 ## [Talos 1.4.8](https://github.com/siderolabs/talos/releases/tag/v1.4.8) (2023-08-10)
 
