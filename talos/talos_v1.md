@@ -1,3 +1,109 @@
+# Changelog for talos_v1.5.2_stable
+## [Talos 1.5.2](https://github.com/siderolabs/talos/releases/tag/v1.5.2) (2023-09-07)
+
+Welcome to the v1.5.2 release of Talos!
+
+
+
+Please try out the release binaries and report any issues at
+https://github.com/siderolabs/talos/issues.
+
+### Component Updates
+
+Kubernetes: v1.28.1
+Linux: 6.1.51
+
+Talos is now built with Go 1.20.8.
+
+
+### Contributors
+
+* Andrey Smirnov
+
+### Changes
+<details><summary>12 commits</summary>
+<p>
+
+* siderolabs/talos@318c66b98 release(v1.5.2): prepare release
+* siderolabs/talos@614e4e892 feat: update Go to 1.20.8
+* siderolabs/talos@cb8eb9da1 feat: update Linux to 6.1.51
+* siderolabs/talos@45c88aedd fix: update kubernetes library for 1.28 upgrade pre-checks
+* siderolabs/talos@b8bd8ee43 fix: shorten VLAN link names to fit into the limit of 15 characters
+* siderolabs/talos@2a2b64eee feat: update default Kubernetes to 1.28.1
+* siderolabs/talos@e713043ff feat: set environment variables early in the boot
+* siderolabs/talos@4552014b9 fix: set correct (1 year) talosconfig expiration
+* siderolabs/talos@1804906c7 fix: set proper timeouts for KubePrism loadbalancer
+* siderolabs/talos@dbfbeb7c9 refactor: update NTP spike detector
+* siderolabs/talos@6ae5b1289 fix: ova contents to be named `disk.*`
+* siderolabs/talos@9d6d580f4 fix: properly calculate overal of node address with subnet filters
+</p>
+</details>
+
+### Changes from siderolabs/extras
+<details><summary>1 commit</summary>
+<p>
+
+* siderolabs/extras@9d5f16f feat: update Go to 1.20.8
+</p>
+</details>
+
+### Changes from siderolabs/go-kubernetes
+<details><summary>1 commit</summary>
+<p>
+
+* siderolabs/go-kubernetes@44e26b3 feat: update removed feature gates for 1.28
+</p>
+</details>
+
+### Changes from siderolabs/pkgs
+<details><summary>2 commits</summary>
+<p>
+
+* siderolabs/pkgs@7f9d6eb feat: update Go to 1.20.8
+* siderolabs/pkgs@99b6ac1 feat: update Linux to 6.1.51
+</p>
+</details>
+
+### Changes from siderolabs/tools
+<details><summary>1 commit</summary>
+<p>
+
+* siderolabs/tools@4d58a1b feat: update Go to 1.20.8
+</p>
+</details>
+
+### Dependency Changes
+
+* **github.com/siderolabs/extras**               v1.5.0 -> v1.5.0-1-g9d5f16f
+* **github.com/siderolabs/go-kubernetes**        v0.2.2 -> v0.2.3
+* **github.com/siderolabs/pkgs**                 v1.5.0-7-gf62fa2c -> v1.5.0-9-g7f9d6eb
+* **github.com/siderolabs/talos/pkg/machinery**  v1.5.1 -> v1.5.2
+* **github.com/siderolabs/tools**                v1.5.0 -> v1.5.0-1-g4d58a1b
+* **k8s.io/api**                                 v0.28.0 -> v0.28.1
+* **k8s.io/apiserver**                           v0.28.0 -> v0.28.1
+* **k8s.io/client-go**                           v0.28.0 -> v0.28.1
+* **k8s.io/component-base**                      v0.28.0 -> v0.28.1
+* **k8s.io/kubectl**                             v0.28.0 -> v0.28.1
+* **k8s.io/kubelet**                             v0.28.0 -> v0.28.1
+
+Previous release can be found at [v1.5.1](https://github.com/siderolabs/talos/releases/tag/v1.5.1)
+
+## Images
+
+```
+ghcr.io/siderolabs/flannel:v0.22.1
+ghcr.io/siderolabs/install-cni:v1.5.0-1-g9d5f16f
+registry.k8s.io/coredns/coredns:v1.10.1
+gcr.io/etcd-development/etcd:v3.5.9
+registry.k8s.io/kube-apiserver:v1.28.1
+registry.k8s.io/kube-controller-manager:v1.28.1
+registry.k8s.io/kube-scheduler:v1.28.1
+registry.k8s.io/kube-proxy:v1.28.1
+ghcr.io/siderolabs/kubelet:v1.28.1
+ghcr.io/siderolabs/installer:v1.5.2
+registry.k8s.io/pause:3.6
+```
+
 # Changelog for talos_v1.5.1_stable
 ## [Talos 1.5.1](https://github.com/siderolabs/talos/releases/tag/v1.5.1) (2023-08-22)
 
