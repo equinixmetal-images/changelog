@@ -1,4 +1,18 @@
-# Changelog for flatcar_3510.2.6_stable
+# Changelog for flatcar_3510.2.8_stable
+ _Changes since **Stable 3510.2.7**_
+ 
+ #### Security fixes:
+ 
+ - Linux ([CVE-2023-20588](https://nvd.nist.gov/vuln/detail/CVE-2023-20588), [CVE-2023-3772](https://nvd.nist.gov/vuln/detail/CVE-2023-3772), [CVE-2023-40283](https://nvd.nist.gov/vuln/detail/CVE-2023-40283), [CVE-2023-4128](https://nvd.nist.gov/vuln/detail/CVE-2023-4128), [CVE-2023-4206](https://nvd.nist.gov/vuln/detail/CVE-2023-4206), [CVE-2023-4207](https://nvd.nist.gov/vuln/detail/CVE-2023-4207), [CVE-2023-4208](https://nvd.nist.gov/vuln/detail/CVE-2023-4208), [CVE-2023-4273](https://nvd.nist.gov/vuln/detail/CVE-2023-4273), [CVE-2023-4569](https://nvd.nist.gov/vuln/detail/CVE-2023-4569))
+ 
+ #### Changes:
+ 
+ - Azure: Add support for Microsoft Azure Network Adapter (MANA) NICs on Azure ([scripts#1131](https://github.com/flatcar/scripts/pull/1131))
+ 
+ #### Updates:
+ 
+ - Linux ([5.15.129](https://lwn.net/Articles/943113) (includes [5.15.128](https://lwn.net/Articles/942866), [5.15.127](https://lwn.net/Articles/941775), [5.15.126](https://lwn.net/Articles/941296)))
+ - ca-certificates ([3.93](https://firefox-source-docs.mozilla.org/security/nss/releases/nss_3_93.html))# Changelog for flatcar_3510.2.6_stable
  _Changes since **Stable 3510.2.5**_
  
  #### Security fixes:
