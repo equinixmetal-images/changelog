@@ -1,4 +1,14 @@
-# Changelog for flatcar_3602.1.5_beta
+# Changelog for flatcar_3602.1.6_beta
+ _Changes since **Beta 3602.1.5**_
+ 
+ #### Changes:
+ 
+ - Azure: Add support for Microsoft Azure Network Adapter (MANA) NICs on Azure ([scripts#1131](https://github.com/flatcar/scripts/pull/1131))
+ 
+ #### Updates:
+ 
+ - Linux ([5.15.132](https://lwn.net/Articles/944877) (includes [5.15.131](https://lwn.net/Articles/943755), [5.15.130](https://lwn.net/Articles/943404)))
+ - ca-certificates ([3.93](https://firefox-source-docs.mozilla.org/security/nss/releases/nss_3_93.html))# Changelog for flatcar_3602.1.5_beta
  _Changes since **Beta 3602.1.4**_
  
  #### Security fixes:
