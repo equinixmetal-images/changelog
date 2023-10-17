@@ -1,3 +1,97 @@
+# Changelog for talos_v1.5.4_stable
+## [Talos 1.5.4](https://github.com/siderolabs/talos/releases/tag/v1.5.4) (2023-10-17)
+
+Welcome to the v1.5.4 release of Talos!
+
+
+
+Please try out the release binaries and report any issues at
+https://github.com/siderolabs/talos/issues.
+
+### Component Updates
+
+Linux: 6.1.58
+
+Talos is built with Go 1.21.3.
+
+
+### Contributors
+
+* Andrey Smirnov
+* Thomas Way
+* Utku Ozdemir
+
+### Changes
+<details><summary>9 commits</summary>
+<p>
+
+* siderolabs/talos@9cf7980e5 release(v1.5.4): prepare release
+* siderolabs/talos@b72abb613 test: fix 'talosctl gen' tests
+* siderolabs/talos@69f1ea283 fix: handle secure boot state policy pcr digest error
+* siderolabs/talos@738092fda fix: use tpm2 hash algorithm constants and allow non-SHA-256 PCRs
+* siderolabs/talos@21d874a8a fix: clear the encryption config in META when STATE is reset
+* siderolabs/talos@58b16b9dc feat: support service account auth in cli
+* siderolabs/talos@124c2ff13 fix: the node IP for kubelet shouldn't change if nothing matches
+* siderolabs/talos@8f8392595 feat: update Linux to 6.1.58
+* siderolabs/talos@db4c5ce99 feat: update Go to 1.20.10
+</p>
+</details>
+
+### Changes from siderolabs/extras
+<details><summary>1 commit</summary>
+<p>
+
+* siderolabs/extras@6241ac7 feat: update Go to 1.20.10
+</p>
+</details>
+
+### Changes from siderolabs/pkgs
+<details><summary>2 commits</summary>
+<p>
+
+* siderolabs/pkgs@45cf9b0 feat: update Linux to 6.1.58
+* siderolabs/pkgs@873830b feat: update Go to 1.20.10
+</p>
+</details>
+
+### Changes from siderolabs/tools
+<details><summary>1 commit</summary>
+<p>
+
+* siderolabs/tools@8adf637 feat: update Go to 1.20.10
+</p>
+</details>
+
+### Dependency Changes
+
+* **github.com/siderolabs/extras**               v1.5.0-1-g9d5f16f -> v1.5.0-2-g6241ac7
+* **github.com/siderolabs/pkgs**                 v1.5.0-11-gd6d7236 -> v1.5.0-13-g45cf9b0
+* **github.com/siderolabs/talos/pkg/machinery**  v1.5.3 -> v1.5.4
+* **github.com/siderolabs/tools**                v1.5.0-1-g4d58a1b -> v1.5.0-2-g8adf637
+* **golang.org/x/net**                           v0.13.0 -> v0.17.0
+* **golang.org/x/sys**                           v0.10.0 -> v0.13.0
+* **golang.org/x/term**                          v0.10.0 -> v0.13.0
+* **golang.org/x/text**                          v0.11.0 -> v0.13.0
+* **google.golang.org/grpc**                     v1.57.0 -> v1.57.1
+
+Previous release can be found at [v1.5.3](https://github.com/siderolabs/talos/releases/tag/v1.5.3)
+
+## Images
+
+```
+ghcr.io/siderolabs/flannel:v0.22.1
+ghcr.io/siderolabs/install-cni:v1.5.0-2-g6241ac7
+registry.k8s.io/coredns/coredns:v1.10.1
+gcr.io/etcd-development/etcd:v3.5.9
+registry.k8s.io/kube-apiserver:v1.28.2
+registry.k8s.io/kube-controller-manager:v1.28.2
+registry.k8s.io/kube-scheduler:v1.28.2
+registry.k8s.io/kube-proxy:v1.28.2
+ghcr.io/siderolabs/kubelet:v1.28.2
+ghcr.io/siderolabs/installer:v1.5.4
+registry.k8s.io/pause:3.6
+```
+
 # Changelog for talos_v1.5.3_stable
 ## [Talos 1.5.3](https://github.com/siderolabs/talos/releases/tag/v1.5.3) (2023-09-22)
 
