@@ -1,4 +1,78 @@
-# Changelog for flatcar_3602.1.6_beta
+# Changelog for flatcar_3745.1.0_beta
+_Changes since **Beta 3732.1.0**_
+ 
+ #### Security fixes:
+ 
+ - curl ([CVE-2023-38039](https://nvd.nist.gov/vuln/detail/CVE-2023-38039), [CVE-2023-38545](https://nvd.nist.gov/vuln/detail/CVE-2023-38545), [CVE-2023-38546](https://nvd.nist.gov/vuln/detail/CVE-2023-38546))
+ - glibc ([CVE-2023-4527](https://nvd.nist.gov/vuln/detail/CVE-2023-4527), [CVE-2023-4806](https://nvd.nist.gov/vuln/detail/CVE-2023-4806))
+ - lua ([CVE-2022-33099](https://nvd.nist.gov/vuln/detail/CVE-2022-33099))
+ - mit-krb5 ([CVE-2023-36054](https://nvd.nist.gov/vuln/detail/CVE-2023-36054))
+ - procps ([CVE-2023-4016](https://nvd.nist.gov/vuln/detail/CVE-2023-4016))
+ - samba ([CVE-2021-44142](https://nvd.nist.gov/vuln/detail/CVE-2021-44142), [CVE-2022-1615](https://nvd.nist.gov/vuln/detail/CVE-2022-1615))
+ 
+ #### Bug fixes:
+ 
+ - Disabled systemd-networkd's RoutesToDNS setting by default to fix provisioning failures observed in VMs with multiple network interfaces on Azure ([scripts#1206](https://github.com/flatcar/scripts/pull/1206))
+ - Fixed the postinstall hook failure when updating from Azure instances without OEM systemd-sysext images to Flatcar Alpha 3745.x.y ([update_engine#29](https://github.com/flatcar/update_engine/pull/29))
+ 
+ #### Changes:
+ 
+ - AWS OEM images now use a systemd-sysext image for layering additional platform-specific software on top of `/usr`
+ - Reworked the VMware OEM software to be shipped as A/B updated systemd-sysext image
+ - SDK: Experimental support for [prefix builds](https://github.com/flatcar/scripts/blob/main/PREFIX.md) to create distro independent, portable, self-contained applications w/ all dependencies included. With contributions from [chewi](https://github.com/chewi) and [HappyTobi](https://github.com/HappyTobi).
+ - Started shipping default ssh client and ssh daemon configs in `/etc/ssh/ssh_config` and `/etc/ssh/sshd_config` which include config snippets in `/etc/ssh/ssh_config.d` and `/etc/ssh/sshd_config.d`, respectively.
+ - The open-vm-tools package in VMware OEM now comes with vmhgfs-fuse, udev rules, pam and vgauth
+ - To make Kubernetes work by default, `/usr/libexec/kubernetes/kubelet-plugins/volume/exec` is now a symlink to the writable folder `/var/kubernetes/kubelet-plugins/volume/exec` ([Flatcar#1193](https://github.com/flatcar/Flatcar/issues/1193))
+ 
+ #### Updates:
+ 
+ - Linux ([6.1.58](https://lwn.net/Articles/947820) (includes [6.1.57](https://lwn.net/Articles/947298), [6.1.56](https://lwn.net/Articles/946854)))
+ - Linux Firmware ([20230919](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tag/?h=20230919))
+ - bind-tools ([9.16.42](https://bind9.readthedocs.io/en/v9.16.42/notes.html#notes-for-bind-9-16-42))
+ - ca-certificates ([3.94](https://firefox-source-docs.mozilla.org/security/nss/releases/nss_3_94.html))
+ - checkpolicy ([3.5](https://github.com/SELinuxProject/selinux/releases/tag/3.5))
+ - curl ([8.3.0](https://curl.se/changes.html#8_3_0))
+ - gcc ([13.2](https://gcc.gnu.org/gcc-13/changes.html))
+ - gzip ([1.13](https://savannah.gnu.org/news/?id=10501))
+ - libgcrypt ([1.10.2](https://git.gnupg.org/cgi-bin/gitweb.cgi?p=libgcrypt.git;a=blob;f=NEWS;h=c9a239615f8070427a96688b1be40a81e59e9b8a;hb=1c5cbacf3d88dded5063e959ee68678ff7d0fa56))
+ - libselinux ([3.5](https://github.com/SELinuxProject/selinux/releases/tag/3.5))
+ - libsemanage ([3.5](https://github.com/SELinuxProject/selinux/releases/tag/3.5))
+ - libsepol ([3.5](https://github.com/SELinuxProject/selinux/releases/tag/3.5))
+ - lua ([5.4.6](https://www.lua.org/manual/5.4/readme.html#changes))
+ - mit-krb5 ([1.21.2](http://web.mit.edu/kerberos/krb5-1.21/))
+ - openssh ([9.4p1](https://www.openssh.com/releasenotes.html#9.4p1))
+ - policycoreutils ([3.5](https://github.com/SELinuxProject/selinux/releases/tag/3.5))
+ - procps ([4.0.4](https://gitlab.com/procps-ng/procps/-/releases/v4.0.4) (includes [4.0.3](https://gitlab.com/procps-ng/procps/-/releases/v4.0.3) and [4.0.0](https://gitlab.com/procps-ng/procps/-/releases/v4.0.0)))
+ - rpcsvc-proto ([1.4.4](https://github.com/thkukuk/rpcsvc-proto/releases/tag/v1.4.4))
+ - samba ([4.18.4](https://wiki.samba.org/index.php/Samba_4.18_Features_added/changed#Samba_4.18.4))
+ - selinux-base ([2.20221101](https://github.com/SELinuxProject/refpolicy/releases/tag/RELEASE_2_20221101))
+ - selinux-base-policy ([2.20221101](https://github.com/SELinuxProject/refpolicy/releases/tag/RELEASE_2_20221101))
+ - selinux-container ([2.20221101](https://github.com/SELinuxProject/refpolicy/releases/tag/RELEASE_2_20221101))
+ - selinux-sssd ([2.20221101](https://github.com/SELinuxProject/refpolicy/releases/tag/RELEASE_2_20221101))
+ - selinux-unconfined ([2.20221101](https://github.com/SELinuxProject/refpolicy/releases/tag/RELEASE_2_20221101))
+ - semodule-utils ([3.5](https://github.com/SELinuxProject/selinux/releases/tag/3.5))
+ - SDK: Rust ([1.72.1](https://github.com/rust-lang/rust/releases/tag/1.72.1))
+ - VMWARE: libdnet ([1.16.2](https://github.com/ofalk/libdnet/releases/tag/libdnet-1.16.2) (includes [1.16](https://github.com/ofalk/libdnet/releases/tag/libdnet-1.16)))
+
+ _Changes since **Alpha 3745.0.0**_
+ 
+ #### Security fixes:
+ 
+ - curl ([CVE-2023-38545](https://nvd.nist.gov/vuln/detail/CVE-2023-38545), [CVE-2023-38546](https://nvd.nist.gov/vuln/detail/CVE-2023-38546))
+ 
+ #### Bug fixes:
+ 
+ - Disabled systemd-networkd's RoutesToDNS setting by default to fix provisioning failures observed in VMs with multiple network interfaces on Azure ([scripts#1206](https://github.com/flatcar/scripts/pull/1206))
+ - Fixed the postinstall hook failure when updating from Azure instances without OEM systemd-sysext images to Flatcar Alpha 3745.x.y ([update_engine#29](https://github.com/flatcar/update_engine/pull/29))
+ 
+ #### Changes:
+ 
+ - To make Kubernetes work by default, `/usr/libexec/kubernetes/kubelet-plugins/volume/exec` is now a symlink to the writable folder `/var/kubernetes/kubelet-plugins/volume/exec` ([Flatcar#1193](https://github.com/flatcar/Flatcar/issues/1193))
+ 
+ #### Updates:
+ 
+ - Linux ([6.1.58](https://lwn.net/Articles/947820) (includes [6.1.57](https://lwn.net/Articles/947298), [6.1.56](https://lwn.net/Articles/946854)))
+ - ca-certificates ([3.94](https://firefox-source-docs.mozilla.org/security/nss/releases/nss_3_94.html))# Changelog for flatcar_3602.1.6_beta
  _Changes since **Beta 3602.1.5**_
  
  #### Changes:
