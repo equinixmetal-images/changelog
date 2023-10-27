@@ -1,4 +1,24 @@
-_Changes since **Beta 3602.1.6**_
+# Changelog for flatcar_3602.2.1_stable
+_Changes since **Stable 3602.2.0**_
+ 
+ #### Security fixes:
+ 
+- Linux ([CVE-2023-31085](https://nvd.nist.gov/vuln/detail/CVE-2023-31085), [CVE-2023-34324](https://nvd.nist.gov/vuln/detail/CVE-2023-34324), [CVE-2023-4244](https://nvd.nist.gov/vuln/detail/CVE-2023-4244), [CVE-2023-42754](https://nvd.nist.gov/vuln/detail/CVE-2023-42754),  [CVE-2023-5197](https://nvd.nist.gov/vuln/detail/CVE-2023-5197))
+ - curl ([CVE-2023-38545](https://nvd.nist.gov/vuln/detail/CVE-2023-38545), [CVE-2023-38546](https://nvd.nist.gov/vuln/detail/CVE-2023-38546))
+ 
+ #### Bug fixes:
+ 
+ - Disabled systemd-networkd's RoutesToDNS setting by default to fix provisioning failures observed in VMs with multiple network interfaces on Azure ([scripts#1206](https://github.com/flatcar/scripts/pull/1206))
+ - Fixed a regression in Docker resulting in file permissions being dropped from exported container images. ([scripts#1231](https://github.com/flatcar/scripts/pull/1231))
+ 
+ #### Changes:
+ 
+ - To make Kubernetes work by default, `/usr/libexec/kubernetes/kubelet-plugins/volume/exec` is now a symlink to the writable folder `/var/kubernetes/kubelet-plugins/volume/exec` ([Flatcar#1193](https://github.com/flatcar/Flatcar/issues/1193))
+ 
+ #### Updates:
+ 
+ - Linux ([5.15.136](https://lwn.net/Articles/948297) (includes [5.15.135](https://lwn.net/Articles/947299), [5.15.134](https://lwn.net/Articles/946855)))
+ - ca-certificates ([3.94](https://firefox-source-docs.mozilla.org/security/nss/releases/nss_3_94.html))_Changes since **Beta 3602.1.6**_
  
 #### Security fixes:
  
