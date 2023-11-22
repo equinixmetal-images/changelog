@@ -38,6 +38,6 @@ This is the list with latest details on the OSs Equinix Metal repackages and pub
 | Talos                   | v1    | Rolling Release | N/A        | [x86_64](talos/v1.md) [arm64](talos/v1.md) | Available            | |
 | Flatcar Linux           |stable | Rolling release | N/A        | Rolling release                       | Available                 | |
 | Flatcar Linux           |beta   | Rolling release | N/A        | Rolling release                       | Available                 | |
-| FreeBSD                 | 13.1  | Jul, 2025       | Jul, 2025  | [x86_64](freebsd/x86_64/13_1.md) [arm64](freebsd/arm64/13_1.md)   | |
-| FreeBSD                 | 13.2  | TBD             | Upstream   | [x86_64](freebsd/x86_64/13_2.md) [arm64](freebsd/arm64/13_2.md)   | |
+| FreeBSD                 | 13.2  | Jan, 2026       | Jan, 2026  | [x86_64](freebsd/x86_64/13_2.md) [arm64](freebsd/arm64/13_2.md)   | |
+| FreeBSD                 | 14.0  | Jan, 2029       | Jan, 2029  | [x86_64](freebsd/x86_64/14_0.md) [arm64](freebsd/arm64/14_0.md)   | |
 | VyOS                    | 1.3   | ???             | ???        | TBD                                   | Coming soon               | |
