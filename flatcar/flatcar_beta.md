@@ -1,4 +1,62 @@
-# Changelog for flatcar_3745.1.0_beta
+# Changelog for flatcar_3760.1.0_beta
+:warning: From Alpha 3794.0.0 Torcx has been removed - please assert that you don't rely on specific Torcx mechanism but now use systemd-sysext. See [here](https://www.flatcar.org/docs/latest/provisioning/sysext/) for more information.
+
+ _Changes since **Beta 3745.1.0**_
+ 
+ #### Security fixes:
+ 
+ - Linux ([CVE-2023-35827](https://nvd.nist.gov/vuln/detail/CVE-2023-35827), [CVE-2023-46813](https://nvd.nist.gov/vuln/detail/CVE-2023-46813), [CVE-2023-46862](https://nvd.nist.gov/vuln/detail/CVE-2023-46862), [CVE-2023-5178](https://nvd.nist.gov/vuln/detail/CVE-2023-5178), [CVE-2023-5717](https://nvd.nist.gov/vuln/detail/CVE-2023-5717))
+ - curl ([CVE-2023-38545](https://nvd.nist.gov/vuln/detail/CVE-2023-38545), [CVE-2023-38546](https://nvd.nist.gov/vuln/detail/CVE-2023-38546))
+ - glibc ([CVE-2023-4911](https://nvd.nist.gov/vuln/detail/CVE-2023-4911))
+ - go ([CVE-2023-39325](https://nvd.nist.gov/vuln/detail/CVE-2023-39325), [CVE-2023-39325](https://nvd.nist.gov/vuln/detail/CVE-2023-39325))
+ - grub ([CVE-2023-4692](https://nvd.nist.gov/vuln/detail/CVE-2023-4692), [CVE-2023-4693](https://nvd.nist.gov/vuln/detail/CVE-2023-4693))
+ - libtirpc ([libtirpc-rhbg-2138317](http://git.linux-nfs.org/?p=steved/libtirpc.git;a=commit;h=4a2d85c64110ee9e21a8c4f9dafd6b0ae621506d), [libtirpc-rhbg-2150611](http://git.linux-nfs.org/?p=steved/libtirpc.git;a=commit;h=f7f0abdf267698de3f74a0285405b1b01f40893b), [libtirpc-rhbg-2224666](http://git.linux-nfs.org/?p=steved/libtirpc.git;a=commit;h=1d2e10afb2ffc35cb3623f57a15f712359f18e75))
+ 
+ #### Bug fixes:
+ 
+ - Added AWS EKS support for versions 1.24-1.28. Fixed `/usr/share/amazon/eks/download-kubelet.sh` to include download paths for these versions. ([scripts#1210](https://github.com/flatcar/scripts/pull/1210))
+ - Fixed iterating over the OEM update payload signatures which prevented the AWS OEM update to 3745.x.y ([update-engine#31](https://github.com/flatcar/update_engine/pull/31))
+ - Fixed quotes handling for update-engine ([Flatcar#1209](https://github.com/flatcar/Flatcar/issues/1209))
+ - Made `sshkeys.service` more robust to only run `coreos-metadata-sshkeys@core.service` when not masked and also retry on failure ([init#112](https://github.com/flatcar/init/pull/112))
+ 
+ #### Changes:
+ 
+ - Brightbox: The regular OpenStack image should now be used, it includes Afterburn for instance metadata attributes
+ - OpenStack: An uncompressed image is provided for simpler import (since the images use qcow2 inline compression, there is no benefit in using the `.gz` or `.bz2` images)
+ 
+ #### Updates:
+ 
+ - Go ([1.20.10](https://go.dev/doc/devel/release#go1.20.10) (includes [1.20.9](https://go.dev/doc/devel/release#go1.20.9)))
+ - Linux ([6.1.62](https://lwn.net/Articles/950700) (includes [6.1.61](https://lwn.net/Articles/949826), [6.1.60](https://lwn.net/Articles/948817) and includes [6.1.59](https://lwn.net/Articles/948299)))
+ - containerd ([1.7.7](https://github.com/containerd/containerd/releases/tag/v1.7.7))
+ - curl ([8.4.0](https://curl.se/changes.html#8_4_0))
+ - libnl ([3.8.0](https://github.com/thom311/libnl/compare/libnl3_7_0...libnl3_8_0))
+ - libtirpc ([1.3.4](https://marc.info/?l=linux-nfs&m=169667640909830&w=2))
+ - libxml2 ([2.11.5](https://gitlab.gnome.org/GNOME/libxml2/-/releases/v2.11.5))
+ - openssh ([9.5p1](https://www.openssh.com/releasenotes.html#9.5p1))
+ - pigz ([2.8](https://zlib.net/pipermail/pigz-announce_zlib.net/2023-August/000018.html))
+ - strace([6.4](https://github.com/strace/strace/releases/tag/v6.4))
+ - whois ([5.5.18](https://github.com/rfc1036/whois/blob/v5.5.18/debian/changelog))
+ 
+ _Changes since **Alpha 3760.0.0**_
+ 
+ #### Security fixes:
+ 
+ - Linux ([CVE-2023-35827](https://nvd.nist.gov/vuln/detail/CVE-2023-35827), [CVE-2023-46813](https://nvd.nist.gov/vuln/detail/CVE-2023-46813), [CVE-2023-46862](https://nvd.nist.gov/vuln/detail/CVE-2023-46862), [CVE-2023-5178](https://nvd.nist.gov/vuln/detail/CVE-2023-5178), [CVE-2023-5717](https://nvd.nist.gov/vuln/detail/CVE-2023-5717))
+ 
+ #### Bug fixes:
+ 
+ - Fixed iterating over the OEM update payload signatures which prevented the AWS OEM update to 3745.x.y ([update-engine#31](https://github.com/flatcar/update_engine/pull/31))
+ - Made `sshkeys.service` more robust to only run `coreos-metadata-sshkeys@core.service` when not masked and also retry on failure ([init#112](https://github.com/flatcar/init/pull/112))
+ 
+ #### Changes:
+ 
+ - Brightbox: The regular OpenStack image should now be used, it includes Afterburn for instance metadata attributes
+ - OpenStack: An uncompressed image is provided for simpler import (since the images use qcow2 inline compression, there is no benefit in using the `.gz` or `.bz2` images)
+ 
+ #### Updates:
+ 
+ - Linux ([6.1.62](https://lwn.net/Articles/950700) (includes [6.1.61](https://lwn.net/Articles/949826), [6.1.60](https://lwn.net/Articles/948817) and includes [6.1.59](https://lwn.net/Articles/948299)))# Changelog for flatcar_3745.1.0_beta
 _Changes since **Beta 3732.1.0**_
  
  #### Security fixes:
