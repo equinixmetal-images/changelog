@@ -1,4 +1,23 @@
-# Changelog for flatcar_3602.2.1_stable
+# Changelog for flatcar_3602.2.2_stable
+:warning: From Alpha 3794.0.0 Torcx has been removed - please assert that you don't rely on specific Torcx mechanism but now use systemd-sysext. See [here](https://www.flatcar.org/docs/latest/provisioning/sysext/) for more information.
+
+
+ _Changes since **Stable 3602.2.1**_
+ 
+ #### Security fixes:
+ 
+ - Linux ([CVE-2023-46813](https://nvd.nist.gov/vuln/detail/CVE-2023-46813), [CVE-2023-5178](https://nvd.nist.gov/vuln/detail/CVE-2023-5178), [CVE-2023-5717](https://nvd.nist.gov/vuln/detail/CVE-2023-5717))
+ 
+
+ #### Changes:
+ 
+ - Brightbox: The regular OpenStack image should now be used, it includes Afterburn for instance metadata attributes
+ - OpenStack: An uncompressed image is provided for simpler import (since the images use qcow2 inline compression, there is no benefit in using the `.gz` or `.bz2` images)
+ - linux kernel: added zstd support for squashfs kernel module ([scripts#1297](https://github.com/flatcar/scripts/pull/1297))
+ 
+ #### Updates:
+ 
+ - Linux ([5.15.138](https://lwn.net/Articles/950714) (includes [5.15.137](https://lwn.net/Articles/948818)))# Changelog for flatcar_3602.2.1_stable
 _Changes since **Stable 3602.2.0**_
  
  #### Security fixes:
