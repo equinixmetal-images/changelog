@@ -1,4 +1,25 @@
-# Changelog for flatcar_3760.1.0_beta
+# Changelog for flatcar_3760.1.1_beta
+ _Changes since **Beta 3760.1.0**_
+ 
+ #### Security fixes:
+ 
+ - Linux ([CVE-2023-6121](https://nvd.nist.gov/vuln/detail/CVE-2023-6121))
+ 
+ #### Bug fixes:
+ 
+ - Deleted files in `/etc` that have a tmpfiles rule that normally would recreate them will now show up again through the `/etc` lowerdir ([Flatcar#1265](https://github.com/flatcar/Flatcar/issues/1265), [bootengine#79](https://github.com/flatcar/bootengine/pull/79))
+ - Fixed the missing `/etc/extensions/` symlinks for the inbuilt Docker/containerd systemd-sysext images on update from Beta 3760.1.0 ([update_engine#32](https://github.com/flatcar/update_engine/pull/32))
+ - GCP: Fixed OS Login enabling ([scripts#1445](https://github.com/flatcar/scripts/pull/1445))
+ 
+ #### Changes:
+ 
+ - linux kernel: added zstd support for squashfs kernel module ([scripts#1297](https://github.com/flatcar/scripts/pull/1297))
+ 
+ #### Updates:
+ 
+ - Linux ([6.1.66](https://lwn.net/Articles/954112) (includes [6.1.65](https://lwn.net/Articles/953648/), [6.1.64](https://lwn.net/Articles/953132), [6.1.63](https://lwn.net/Articles/952003)))
+ - afterburn ([5.5.0](https://github.com/coreos/afterburn/releases/tag/v5.5.0))
+ - ca-certificates ([3.95](https://firefox-source-docs.mozilla.org/security/nss/releases/nss_3_95.html))# Changelog for flatcar_3760.1.0_beta
 :warning: From Alpha 3794.0.0 Torcx has been removed - please assert that you don't rely on specific Torcx mechanism but now use systemd-sysext. See [here](https://www.flatcar.org/docs/latest/provisioning/sysext/) for more information.
 
  _Changes since **Beta 3745.1.0**_
