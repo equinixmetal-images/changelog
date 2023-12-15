@@ -1,4 +1,18 @@
-# Changelog for flatcar_3602.2.2_stable
+# Changelog for flatcar_3602.2.3_stable
+ _Changes since **Stable 3602.2.2**_
+ 
+ #### Security fixes:
+ 
+ - Linux ([CVE-2023-46862](https://nvd.nist.gov/vuln/detail/CVE-2023-46862), [CVE-2023-6121](https://nvd.nist.gov/vuln/detail/CVE-2023-6121))
+ 
+ #### Bug fixes:
+ 
+ - Deleted files in `/etc` that have a tmpfiles rule that normally would recreate them will now show up again through the `/etc` lowerdir ([Flatcar#1265](https://github.com/flatcar/Flatcar/issues/1265), [bootengine#79](https://github.com/flatcar/bootengine/pull/79))
+ 
+ #### Updates:
+ 
+ - Linux ([5.15.142](https://lwn.net/Articles/954114) (includes [5.15.141](https://lwn.net/Articles/953649/), [5.15.140](https://lwn.net/Articles/953130), [5.15.139](https://lwn.net/Articles/952004)))
+ - ca-certificates ([3.95](https://firefox-source-docs.mozilla.org/security/nss/releases/nss_3_95.html))# Changelog for flatcar_3602.2.2_stable
 :warning: From Alpha 3794.0.0 Torcx has been removed - please assert that you don't rely on specific Torcx mechanism but now use systemd-sysext. See [here](https://www.flatcar.org/docs/latest/provisioning/sysext/) for more information.
 
 
