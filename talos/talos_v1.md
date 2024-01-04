@@ -1,3 +1,73 @@
+# Changelog for talos_v1.6.1_stable
+## [Talos 1.6.1](https://github.com/siderolabs/talos/releases/tag/v1.6.1) (2023-12-22)
+
+Welcome to the v1.6.1 release of Talos!
+
+
+
+Please try out the release binaries and report any issues at
+https://github.com/siderolabs/talos/issues.
+
+### Component Updates
+
+Linux: 6.1.69
+containerd: 1.7.11
+
+Talos is built with Go 1.21.5.
+
+
+### Contributors
+
+* Andrey Smirnov
+* Radosław Piliszek
+
+### Changes
+<details><summary>5 commits</summary>
+<p>
+
+* siderolabs/talos@0af17af3a release(v1.6.1): prepare release
+* siderolabs/talos@8355c9eef fix: properly overwrite files on install
+* siderolabs/talos@2e9901751 fix: update the way secureboot signer fetches certificate (azure)
+* siderolabs/talos@4caffd383 fix: use correct prefix when installing SBC files
+* siderolabs/talos@9e56d539b feat: update Linux to 6.1.69, containerd to 1.7.11
+</p>
+</details>
+
+### Changes from siderolabs/pkgs
+<details><summary>4 commits</summary>
+<p>
+
+* siderolabs/pkgs@8fa73db feat: update Linux to 6.1.69
+* siderolabs/pkgs@f36484e feat: update containerd to 1.7.11
+* siderolabs/pkgs@6fdc79a feat: enable IRQ remapping on amd64
+* siderolabs/pkgs@22cd9b4 chore: disable one commit check
+</p>
+</details>
+
+### Dependency Changes
+
+* **github.com/containerd/containerd**           v1.7.9 -> v1.7.11
+* **github.com/siderolabs/pkgs**                 v1.6.0-5-g3ae2450 -> v1.6.0-9-g8fa73db
+* **github.com/siderolabs/talos/pkg/machinery**  v1.6.0 -> v1.6.1
+
+Previous release can be found at [v1.6.0](https://github.com/siderolabs/talos/releases/tag/v1.6.0)
+
+## Images
+
+```
+ghcr.io/siderolabs/flannel:v0.23.0
+ghcr.io/siderolabs/install-cni:v1.6.0-1-g113887a
+registry.k8s.io/coredns/coredns:v1.11.1
+gcr.io/etcd-development/etcd:v3.5.11
+registry.k8s.io/kube-apiserver:v1.29.0
+registry.k8s.io/kube-controller-manager:v1.29.0
+registry.k8s.io/kube-scheduler:v1.29.0
+registry.k8s.io/kube-proxy:v1.29.0
+ghcr.io/siderolabs/kubelet:v1.29.0
+ghcr.io/siderolabs/installer:v1.6.1
+registry.k8s.io/pause:3.8
+```
+
 # Changelog for talos_v1.6.0_stable
 ## [Talos 1.6.0](https://github.com/siderolabs/talos/releases/tag/v1.6.0) (2023-12-15)
 
