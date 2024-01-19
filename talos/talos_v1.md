@@ -1,3 +1,108 @@
+# Changelog for talos_v1.6.2_stable
+## [Talos 1.6.2](https://github.com/siderolabs/talos/releases/tag/v1.6.2) (2024-01-18)
+
+Welcome to the v1.6.2 release of Talos!
+
+
+
+Please try out the release binaries and report any issues at
+https://github.com/siderolabs/talos/issues.
+
+### Component Updates
+
+Linux: 6.1.73
+
+Talos is built with Go 1.21.6.
+
+
+### Contributors
+
+* Andrey Smirnov
+* Utku Ozdemir
+* Dmitriy Matrenichev
+* Drew Hess
+* Hervé Werner
+* JJGadgets
+* Jonomir
+* Serge Logvinov
+
+### Changes
+<details><summary>16 commits</summary>
+<p>
+
+* siderolabs/talos@26eee7553 release(v1.6.2): prepare release
+* siderolabs/talos@f87a0468b fix: strategic patch merging for audit policy
+* siderolabs/talos@36b913dba fix: watch bufer overrun for RouteStatus
+* siderolabs/talos@3576d113c fix: fix .der output in `talosctl gen secureboot`
+* siderolabs/talos@0191c3b2c fix: support KubePrism settings in Kubernetes Discovery
+* siderolabs/talos@8fa6e93f0 fix: force KubePrism to connect using IPv4
+* siderolabs/talos@e05eebca1 fix: update kmsg with utf-8 fix
+* siderolabs/talos@37bfa60dd fix: merge ports and ingress configs correctly in NetworkRuleConfig
+* siderolabs/talos@306c5cad2 fix: fix nodes on dashboard footer when node names are used in `--nodes`
+* siderolabs/talos@530332d24 fix: disk UUID & WWID always empty in `talosctl disks`
+* siderolabs/talos@440f56341 chore: pull in NBD modules
+* siderolabs/talos@3ebdbabaf fix: default priority for ipv6
+* siderolabs/talos@b47619543 fix: replace the filemap implementation to not buffer in memory
+* siderolabs/talos@0ec551597 fix: imager should support different Talos versions
+* siderolabs/talos@4b3168624 feat: support iPXE direct booting in `talosctl cluster create`
+* siderolabs/talos@d98699c07 feat: update Linux 6.1.73, go 1.21.6
+</p>
+</details>
+
+### Changes from siderolabs/go-kmsg
+<details><summary>2 commits</summary>
+<p>
+
+* siderolabs/go-kmsg@e358d13 fix: decode escape sequences while reading from kmsg
+* siderolabs/go-kmsg@4297bd5 feat: add BSD support
+</p>
+</details>
+
+### Changes from siderolabs/pkgs
+<details><summary>3 commits</summary>
+<p>
+
+* siderolabs/pkgs@0078a66 feat: enable NBD
+* siderolabs/pkgs@31b9d61 feat: enable nct6683 sensors as module
+* siderolabs/pkgs@f8c6a35 feat: go 1.21.6, linux 6.1.73
+</p>
+</details>
+
+### Changes from siderolabs/tools
+<details><summary>1 commit</summary>
+<p>
+
+* siderolabs/tools@5e034ec feat: update Go to 1.21.6
+</p>
+</details>
+
+### Dependency Changes
+
+* **github.com/pin/tftp**                        2f79be2dba4e **_new_**
+* **github.com/siderolabs/go-kmsg**              v0.1.3 -> v0.1.4
+* **github.com/siderolabs/pkgs**                 v1.6.0-9-g8fa73db -> v1.6.0-12-g0078a66
+* **github.com/siderolabs/talos/pkg/machinery**  v1.6.1 -> v1.6.2
+* **github.com/siderolabs/tools**                v1.6.0-1-g336d248 -> v1.6.0-2-g5e034ec
+* **golang.org/x/sys**                           v0.15.0 -> v0.16.0
+
+Previous release can be found at [v1.6.1](https://github.com/siderolabs/talos/releases/tag/v1.6.1)
+
+## Images
+
+```
+ghcr.io/siderolabs/flannel:v0.23.0
+ghcr.io/siderolabs/install-cni:v1.6.0-1-g113887a
+registry.k8s.io/coredns/coredns:v1.11.1
+gcr.io/etcd-development/etcd:v3.5.11
+registry.k8s.io/kube-apiserver:v1.29.0
+registry.k8s.io/kube-controller-manager:v1.29.0
+registry.k8s.io/kube-scheduler:v1.29.0
+registry.k8s.io/kube-proxy:v1.29.0
+ghcr.io/siderolabs/kubelet:v1.29.0
+ghcr.io/siderolabs/installer:v1.6.2
+registry.k8s.io/pause:3.8
+```
+
 # Changelog for talos_v1.6.1_stable
 ## [Talos 1.6.1](https://github.com/siderolabs/talos/releases/tag/v1.6.1) (2023-12-22)
 
