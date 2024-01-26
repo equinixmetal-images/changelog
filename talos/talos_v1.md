@@ -1,3 +1,78 @@
+# Changelog for talos_v1.6.3_stable
+## [Talos 1.6.3](https://github.com/siderolabs/talos/releases/tag/v1.6.3) (2024-01-24)
+
+Welcome to the v1.6.3 release of Talos!
+
+
+
+Please try out the release binaries and report any issues at
+https://github.com/siderolabs/talos/issues.
+
+### Component Updates
+
+Linux: 6.1.74
+Kubernetes: 1.29.1
+
+Talos is built with Go 1.21.6.
+
+
+### Contributors
+
+* Andrey Smirnov
+
+### Changes
+<details><summary>4 commits</summary>
+<p>
+
+* siderolabs/talos@d53e07c1a release(v1.6.3): prepare release
+* siderolabs/talos@815fef8c3 fix: allow META encoded values to be compressed
+* siderolabs/talos@56e87f55b feat: update Kubernetes default to 1.29.1
+* siderolabs/talos@63fc46f0a feat: update Linux to 6.1.74
+</p>
+</details>
+
+### Changes from siderolabs/pkgs
+<details><summary>3 commits</summary>
+<p>
+
+* siderolabs/pkgs@f51aedb fix: disable nct6883 on arm64
+* siderolabs/pkgs@7ddbdb4 fix: enable FUSION_SPI driver
+* siderolabs/pkgs@00d2978 feat: update Linux to 6.1.74
+</p>
+</details>
+
+### Dependency Changes
+
+* **github.com/siderolabs/pkgs**                 v1.6.0-12-g0078a66 -> v1.6.0-15-gf51aedb
+* **github.com/siderolabs/talos/pkg/machinery**  v1.6.2 -> v1.6.3
+* **k8s.io/api**                                 v0.29.0 -> v0.29.1
+* **k8s.io/apimachinery**                        v0.29.0 -> v0.29.1
+* **k8s.io/apiserver**                           v0.29.0 -> v0.29.1
+* **k8s.io/client-go**                           v0.29.0 -> v0.29.1
+* **k8s.io/component-base**                      v0.29.0 -> v0.29.1
+* **k8s.io/cri-api**                             v0.29.0 -> v0.29.1
+* **k8s.io/kube-scheduler**                      v0.29.0 -> v0.29.1
+* **k8s.io/kubectl**                             v0.29.0 -> v0.29.1
+* **k8s.io/kubelet**                             v0.29.0 -> v0.29.1
+
+Previous release can be found at [v1.6.2](https://github.com/siderolabs/talos/releases/tag/v1.6.2)
+
+## Images
+
+```
+ghcr.io/siderolabs/flannel:v0.23.0
+ghcr.io/siderolabs/install-cni:v1.6.0-1-g113887a
+registry.k8s.io/coredns/coredns:v1.11.1
+gcr.io/etcd-development/etcd:v3.5.11
+registry.k8s.io/kube-apiserver:v1.29.1
+registry.k8s.io/kube-controller-manager:v1.29.1
+registry.k8s.io/kube-scheduler:v1.29.1
+registry.k8s.io/kube-proxy:v1.29.1
+ghcr.io/siderolabs/kubelet:v1.29.1
+ghcr.io/siderolabs/installer:v1.6.3
+registry.k8s.io/pause:3.8
+```
+
 # Changelog for talos_v1.6.2_stable
 ## [Talos 1.6.2](https://github.com/siderolabs/talos/releases/tag/v1.6.2) (2024-01-18)
 
