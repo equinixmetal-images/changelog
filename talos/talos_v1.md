@@ -1,3 +1,107 @@
+# Changelog for talos_v1.6.4_stable
+## [Talos 1.6.4](https://github.com/siderolabs/talos/releases/tag/v1.6.4) (2024-02-01)
+
+Welcome to the v1.6.4 release of Talos!
+
+
+
+Please try out the release binaries and report any issues at
+https://github.com/siderolabs/talos/issues.
+
+### Component Updates
+
+containerd: 1.7.13
+runc: 1.1.12
+
+See [CVE-2024-21626](https://github.com/opencontainers/runc/security/advisories/GHSA-xr7r-f8xq-vfvv) for the runc update.
+
+Talos is built with Go 1.21.6.
+
+
+### Contributors
+
+* Andrey Smirnov
+* Andrey Smirnov
+* Dmitriy Matrenichev
+* Utku Ozdemir
+* Noel Georgi
+* Artem Chernyshev
+
+### Changes
+<details><summary>7 commits</summary>
+<p>
+
+* siderolabs/talos@431bcada7 release(v1.6.4): prepare release
+* siderolabs/talos@040c535c6 fix: retry blockdevice open in the installer
+* siderolabs/talos@00b34b254 fix: take into account the moment seen when cleaning up CRI images
+* siderolabs/talos@c5ad166be fix: be more tolerant to error handling in Mounts API
+* siderolabs/talos@b438f8a9b fix: run the interactive installer loop to report errors
+* siderolabs/talos@12e83b7e3 docs: clarify node taints/labels for worker nodes
+* siderolabs/talos@7840f8a89 feat: update containerd 1.7.13, runc 1.1.12
+</p>
+</details>
+
+### Changes from siderolabs/go-api-signature
+<details><summary>20 commits</summary>
+<p>
+
+* siderolabs/go-api-signature@370cebf fix: always print the login URL on key renew flow
+* siderolabs/go-api-signature@d28609a feat: move in the cli grpc interceptor logic, support service account in env
+* siderolabs/go-api-signature@4602acc chore: add a dummy workflow
+* siderolabs/go-api-signature@cfd21b6 fix: support validating signatures generated with the time in the future
+* siderolabs/go-api-signature@74dd3dc chore: bump deps
+* siderolabs/go-api-signature@d78bedb chore: bump deps
+* siderolabs/go-api-signature@a034e9f feat: replace scopes with roles
+* siderolabs/go-api-signature@5b4f3bb chore: run rekres
+* siderolabs/go-api-signature@9dba116 chore: remove time.Sleep hack
+* siderolabs/go-api-signature@e84e686 chore: bump dependencies
+* siderolabs/go-api-signature@8baaf8a chore: bump deps
+* siderolabs/go-api-signature@5f27e1e chore: add renovate bot and bump deps
+* siderolabs/go-api-signature@69886dc feat: allow custom validations on PGP key
+* siderolabs/go-api-signature@63d4da3 fix: limit clock skew for short-lived keys
+* siderolabs/go-api-signature@cdb9722 feat: add support for +-5 min clock skew
+* siderolabs/go-api-signature@7b80a50 refactor: use options pattern in RegisterPGPPublicKey
+* siderolabs/go-api-signature@c647861 feat: add scopes to RegisterPublicKeyRequest
+* siderolabs/go-api-signature@5d3647e feat: provide more client PGP functions
+* siderolabs/go-api-signature@2b682ec feat: initial version
+* siderolabs/go-api-signature@a4c2943 chore: initial commit
+</p>
+</details>
+
+### Changes from siderolabs/pkgs
+<details><summary>1 commit</summary>
+<p>
+
+* siderolabs/pkgs@b77ffb7 chore: bump runc+containerd
+</p>
+</details>
+
+### Dependency Changes
+
+* **github.com/containerd/containerd**           v1.7.11 -> v1.7.13
+* **github.com/opencontainers/runtime-spec**     v1.1.0-rc.1 -> v1.1.0
+* **github.com/siderolabs/go-api-signature**     v0.3.1 **_new_**
+* **github.com/siderolabs/pkgs**                 v1.6.0-15-gf51aedb -> v1.6.0-16-gb77ffb7
+* **github.com/siderolabs/talos/pkg/machinery**  v1.6.3 -> v1.6.4
+
+Previous release can be found at [v1.6.3](https://github.com/siderolabs/talos/releases/tag/v1.6.3)
+
+## Images
+
+```
+ghcr.io/siderolabs/flannel:v0.23.0
+ghcr.io/siderolabs/install-cni:v1.6.0-1-g113887a
+registry.k8s.io/coredns/coredns:v1.11.1
+gcr.io/etcd-development/etcd:v3.5.11
+registry.k8s.io/kube-apiserver:v1.29.1
+registry.k8s.io/kube-controller-manager:v1.29.1
+registry.k8s.io/kube-scheduler:v1.29.1
+registry.k8s.io/kube-proxy:v1.29.1
+ghcr.io/siderolabs/kubelet:v1.29.1
+ghcr.io/siderolabs/installer:v1.6.4
+registry.k8s.io/pause:3.8
+```
+
 # Changelog for talos_v1.6.3_stable
 ## [Talos 1.6.3](https://github.com/siderolabs/talos/releases/tag/v1.6.3) (2024-01-24)
 
