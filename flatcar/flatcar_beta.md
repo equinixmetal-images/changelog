@@ -1,3 +1,113 @@
+# Changelog for flatcar_3913.1.0_beta
+ _Changes since **Beta 3874.1.0**_
+ 
+ #### Security fixes:
+ 
+ - Downgraded xz-utils to 5.4.2 as precaution even though Flatcar is not affected of the SSH backdoor ([CVE-2024-3094](https://nvd.nist.gov/vuln/detail/CVE-2024-3094))
+ - coreutils ([CVE-2024-0684](https://nvd.nist.gov/vuln/detail/CVE-2024-0684))
+ - dnsmasq ([CVE-2023-28450](https://nvd.nist.gov/vuln/detail/CVE-2023-28450), [CVE-2023-50387](https://nvd.nist.gov/vuln/detail/CVE-2023-50387), [CVE-2023-50868](https://nvd.nist.gov/vuln/detail/CVE-2023-50868))
+ - gcc ([CVE-2023-4039](https://nvd.nist.gov/vuln/detail/CVE-2023-4039))
+ - glibc ([CVE-2023-5156](https://nvd.nist.gov/vuln/detail/CVE-2023-5156), [CVE-2023-6246](https://nvd.nist.gov/vuln/detail/CVE-2023-6246), [CVE-2023-6779](https://nvd.nist.gov/vuln/detail/CVE-2023-6779), [CVE-2023-6780](https://nvd.nist.gov/vuln/detail/CVE-2023-6780))
+ - gnupg ([gnupg-2024-01-25](https://gnupg.org/blog/20240125-smartcard-backup-key.html))
+ - gnutls ([CVE-2024-0567](https://nvd.nist.gov/vuln/detail/CVE-2024-0567), [CVE-2024-0553](https://nvd.nist.gov/vuln/detail/CVE-2024-0553))
+ - libuv ([CVE-2024-24806](https://nvd.nist.gov/vuln/detail/CVE-2024-24806))
+ - libxml2 ([CVE-2024-25062](https://nvd.nist.gov/vuln/detail/CVE-2024-25062))
+ - openssl ([CVE-2023-5678](https://nvd.nist.gov/vuln/detail/CVE-2023-5678), [CVE-2023-6129](https://nvd.nist.gov/vuln/detail/CVE-2023-6129), [CVE-2023-6237](https://nvd.nist.gov/vuln/detail/CVE-2023-6237), [CVE-2024-0727](https://nvd.nist.gov/vuln/detail/CVE-2024-0727))
+ - sudo ([CVE-2023-42465](https://nvd.nist.gov/vuln/detail/CVE-2023-42465))
+ - vim ([CVE-2023-48231](https://nvd.nist.gov/vuln/detail/CVE-2023-48231), [CVE-2023-48232](https://nvd.nist.gov/vuln/detail/CVE-2023-48232), [CVE-2023-48233](https://nvd.nist.gov/vuln/detail/CVE-2023-48233), [CVE-2023-48234](https://nvd.nist.gov/vuln/detail/CVE-2023-48234), [CVE-2023-48235](https://nvd.nist.gov/vuln/detail/CVE-2023-48235), [CVE-2023-48236](https://nvd.nist.gov/vuln/detail/CVE-2023-48236), [CVE-2023-48237](https://nvd.nist.gov/vuln/detail/CVE-2023-48237), [CVE-2023-48706](https://nvd.nist.gov/vuln/detail/CVE-2023-48706))
+ 
+ #### Bug fixes:
+ 
+ - Disabled user-configdrive.service on OpenStack when config drive is used, which caused the hostname to be overwritten. The coreos-cloudinit.service unit already runs on OpenStack if the system is not configured via ignition. ([Flatcar#1385](https://github.com/flatcar/Flatcar/issues/1385))
+ - Fixed `toolbox` to prevent mounted `ctr` snapshots from being garbage-collected ([toolbox#9](https://github.com/flatcar/toolbox/pull/9))
+ - Removed custom CloudSigma coreos-cloudinit service configuration since it will be called with the cloudsigma oem anyway. The restart of the service can also cause the serial port to be stuck in an nondeterministic state which breaks future runs.
+ 
+ #### Changes:
+ 
+ - A new format `qemu_uefi_secure` is introduced to test Flatcar for SecureBoot-enabled features. The format will be later merged into `qemu_uefi`.
+ - Added Ignition Clevis support for encrypted disks unlocked with a TPM2 device or a Tang server ([scripts#1560](https://github.com/flatcar/scripts/pull/1560))
+ - Added Scaleway images ([flatcar/scripts#1683](https://github.com/flatcar/scripts/pull/1683))
+ - Added support for unlocking the rootfs with a TPM set up by systemd-cryptenroll ([bootengine#93](https://github.com/flatcar/bootengine/pull/93))
+ - Disabled real-time priority for multipathd as it prevents the cgroups2 cpu controller from working. ([flatcar/scripts#1771](https://github.com/flatcar/scripts/pull/1771))
+ - Enabled the GRUB TPM2 module to measure the boot code path and files into PCR 8+9 in UEFI ([scripts#1861](https://github.com/flatcar/scripts/pull/1861))
+ - Provided a ZFS-2.2.2 Flatcar extension as optional systemd-sysext image with the release. Write 'zfs' to `/etc/flatcar/enabled-sysext.conf` through Ignition and the sysext will be installed during provisioning. ZFS support is experimental and ZFS is not supported for the root partition. ([flatcar/scripts#1742](https://github.com/flatcar/scripts/pull/1742))
+ - Removed Linux drivers for Mellanox Technologies Switch ASICs family and Spectrum/Spectrum-2/Spectrum-3/Spectrum-4 Ethernet Switch ASICs to reduce the initrd size on AMD64 by ~5MB ([flatcar/scripts#1734](https://github.com/flatcar/scripts/pull/1734)). This change is part of the effort to reduce the initrd size ([flatcar#1381](https://github.com/flatcar/Flatcar/issues/1381)).
+ - Removed coreos-cloudinit support for automatic keys conversion (e.g `reboot-strategy` -> `reboot_strategy`) ([scripts#1687](https://github.com/flatcar/scripts/pull/1687))
+ - SDK: Unified qemu image formats, so that the `qemu_uefi` build target provides the regular `qemu` and the `qemu_uefi_secure` artifacts ([scripts#1847](https://github.com/flatcar/scripts/pull/1847))
+ 
+ #### Updates:
+ 
+ - Go ([1.20.14](https://go.dev/doc/devel/release#go1.20.14))
+ - Ignition ([2.18.0](https://coreos.github.io/ignition/release-notes/#ignition-2180-2024-03-01) (includes [2.17.0](https://coreos.github.io/ignition/release-notes/#ignition-2170-2023-11-20), [2.16.2](https://coreos.github.io/ignition/release-notes/#ignition-2162-2023-07-12), [2.16.1](https://coreos.github.io/ignition/release-notes/#ignition-2161-2023-07-10) and [2.16.0](https://coreos.github.io/ignition/release-notes/#ignition-2160-2023-06-29)))
+ - Linux Firmware ([20240312](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tag/?h=20240312) (includes [20240220](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tag/?h=20240220)))
+ - audit ([3.1.1](https://github.com/linux-audit/audit-userspace/releases/tag/v3.1.1))
+ - bind-tools ([9.16.48](https://bind9.readthedocs.io/en/v9.16.48/notes.html#notes-for-bind-9-16-48))
+ - c-ares ([1.25.0](https://c-ares.org/changelog.html#1_25_0))
+ - cJSON ([1.7.17](https://github.com/DaveGamble/cJSON/releases/tag/v1.7.17))
+ - ca-certificates ([3.99](https://firefox-source-docs.mozilla.org/security/nss/releases/nss_3_99.html))
+ - checkpolicy ([3.6](https://github.com/SELinuxProject/selinux/releases/tag/3.6))
+ - curl ([8.6.0](https://curl.se/changes.html#8_6_0))
+ - ethtool ([6.6](https://git.kernel.org/pub/scm/network/ethtool/ethtool.git/tree/NEWS?h=v6.6))
+ - glibc ([2.38](https://sourceware.org/pipermail/libc-alpha/2023-July/150524.html))
+ - gnupg ([2.4.4](https://lists.gnupg.org/pipermail/gnupg-announce/2024q1/000481.html) (includes [2.2.42](https://dev.gnupg.org/T6307)))
+ - less ([643](https://www.greenwoodsoftware.com/less/news.643.html))
+ - libbsd ([0.11.8](https://lists.freedesktop.org/archives/libbsd/2024-January/000377.html))
+ - libcap-ng ([0.8.4](https://github.com/stevegrubb/libcap-ng/releases/tag/v0.8.4))
+ - libgcrypt ([1.10.3](https://git.gnupg.org/cgi-bin/gitweb.cgi?p=libgcrypt.git;a=blob;f=NEWS;h=b767dc1170eb479b9a311cca4074c58e4eedaf0b;hb=aa1610866f8e42bdc272584f0a717f32ee050a22))
+ - libidn2 ([2.3.7](https://gitlab.com/libidn/libidn2/-/blob/v2.3.7/NEWS) (includes https://gitlab.com/libidn/libidn2/-/releases/v2.3.4)))
+ - libksba ([1.6.6](https://git.gnupg.org/cgi-bin/gitweb.cgi?p=libksba.git;a=blob;f=NEWS;h=48b42025773e88fbb78d015d1f154fef4c80ef9f;hb=5b220df6f8216a9d5f6139c7b17f075374a27480))
+ - libnvme ([1.7.1](https://github.com/linux-nvme/libnvme/releases/tag/v1.7.1) (includes [1.7](https://github.com/linux-nvme/libnvme/releases/tag/v1.7)))
+ - libpsl ([0.21.5](https://github.com/rockdaboot/libpsl/blob/0.21.5/NEWS))
+ - libseccomp ([2.5.5](https://github.com/seccomp/libseccomp/releases/tag/v2.5.5))
+ - libselinux ([3.6](https://github.com/SELinuxProject/selinux/releases/tag/3.6))
+ - libsemanage ([3.6](https://github.com/SELinuxProject/selinux/releases/tag/3.6))
+ - libsepol ([3.6](https://github.com/SELinuxProject/selinux/releases/tag/3.6))
+ - libuv ([1.48.0](https://github.com/libuv/libuv/releases/tag/v1.48.0))
+ - libverto ([0.3.2](https://github.com/latchset/libverto/releases/tag/0.3.2))
+ - libxml2 ([2.12.5](https://gitlab.gnome.org/GNOME/libxml2/-/releases/v2.12.5) (includes [2.12.4](https://gitlab.gnome.org/GNOME/libxml2/-/blob/v2.12.4/NEWS)))
+ - lsof ([4.99.3](https://github.com/lsof-org/lsof/releases/tag/4.99.3) (includes [4.99.2](https://github.com/lsof-org/lsof/releases/tag/4.99.2) and [4.99.1](https://github.com/lsof-org/lsof/releases/tag/4.99.1)))
+ - mime-types ([2.1.54](https://pagure.io/mailcap/blob/9699055a1b4dfb90f7594ee2e8dda705fa56d3b8/f/NEWS))
+ - multipath-tools ([0.9.7](https://github.com/opensvc/multipath-tools/commits/0.9.7))
+ - nvme-cli ([2.7.1](https://github.com/linux-nvme/nvme-cli/releases/tag/v2.7.1) (includes [2.7](https://github.com/linux-nvme/nvme-cli/releases/tag/v2.7)))
+ - openssl ([3.2.1](https://github.com/openssl/openssl/blob/openssl-3.2.1/CHANGES.md))
+ - policycoreutils ([3.6](https://github.com/SELinuxProject/selinux/releases/tag/3.6))
+ - semodule-utils ([3.6](https://github.com/SELinuxProject/selinux/releases/tag/3.6))
+ - shim ([15.8](https://github.com/rhboot/shim/releases/tag/15.8))
+ - sqlite ([3.45.1](https://www.sqlite.org/releaselog/3_45_1.html))
+ - sudo ([1.9.15p5](https://www.sudo.ws/releases/stable/#1.9.15p5))
+ - systemd ([255.3](https://github.com/systemd/systemd-stable/releases/tag/v255.3) (from 252.11))
+ - thin-provisioning-tools ([1.0.10](https://github.com/jthornber/thin-provisioning-tools/commits/v1.0.10/))
+ - traceroute ([2.1.5](https://sourceforge.net/projects/traceroute/files/traceroute/traceroute-2.1.5/) (includes [2.1.4](https://sourceforge.net/projects/traceroute/files/traceroute/traceroute%202.1.4/)))
+ - usbutils ([017](https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/usbutils.git/tree/NEWS?h=v017))
+ - util-linux ([2.39.3](https://github.com/util-linux/util-linux/blob/v2.39.3/Documentation/releases/v2.39.3-ReleaseNotes))
+ - vim ([9.0.2167](https://github.com/vim/vim/commits/v9.0.2167/))
+ - xmlsec ([1.3.3](https://github.com/lsh123/xmlsec/releases/tag/1.3.3))
+ - SDK: python ([3.11.8](https://www.get-python.org/downloads/release/python-3118/))
+ - SDK: qemu ([8.1.5](https://wiki.qemu.org/ChangeLog/8.1))
+ - SDK: Rust ([1.76.0](https://github.com/rust-lang/rust/releases/tag/1.76.0))
+
+
+ _Changes since **Alpha 3913.0.0**_
+ 
+ #### Security fixes:
+ 
+ - Downgraded xz-utils to 5.4.2 as precaution even though Flatcar is not affected of the SSH backdoor ([CVE-2024-3094](https://nvd.nist.gov/vuln/detail/CVE-2024-3094))
+ 
+ #### Bug fixes:
+ 
+ - Disabled user-configdrive.service on OpenStack when config drive is used, which caused the hostname to be overwritten. The coreos-cloudinit.service unit already runs on OpenStack if the system is not configured via ignition. ([Flatcar#1385](https://github.com/flatcar/Flatcar/issues/1385))
+ - Fixed `toolbox` to prevent mounted `ctr` snapshots from being garbage-collected ([toolbox#9](https://github.com/flatcar/toolbox/pull/9))
+ 
+ #### Changes:
+ 
+ - Added support for unlocking the rootfs with a TPM set up by systemd-cryptenroll ([bootengine#93](https://github.com/flatcar/bootengine/pull/93))
+ - Disabled real-time priority for multipathd as it prevents the cgroups2 cpu controller from working. ([scripts#1771](https://github.com/flatcar/scripts/pull/1771))
+ - Enabled the GRUB TPM2 module to measure the boot code path and files into PCR 8+9 in UEFI ([scripts#1861](https://github.com/flatcar/scripts/pull/1861))
+ - SDK: Unified qemu image formats, so that the `qemu_uefi` build target provides the regular `qemu` and the `qemu_uefi_secure` artifacts ([scripts#1847](https://github.com/flatcar/scripts/pull/1847))
+ 
+ #### Updates:
+ 
+ - ca-certificates ([3.99](https://firefox-source-docs.mozilla.org/security/nss/releases/nss_3_99.html))
 # Changelog for flatcar_3850.1.0_beta
  _Changes since **Beta 3815.1.0**_
  
