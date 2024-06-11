@@ -1,4 +1,10 @@
-# Changelog for flatcar_3815.2.2_stable
+# Changelog for flatcar_3815.2.3_stable
+ _Changes since **Stable 3815.2.2**_
+ 
+ #### Updates:
+ 
+ - Linux ([6.1.90](https://lwn.net/Articles/972212) (includes [6.1.89](https://lwn.net/Articles/971443), [6.1.88](https://lwn.net/Articles/971364), [6.1.87](https://lwn.net/Articles/970173), [6.1.86](https://lwn.net/Articles/969735)))
+ - ca-certificates ([3.100](https://firefox-source-docs.mozilla.org/security/nss/releases/nss_3_100.html))# Changelog for flatcar_3815.2.2_stable
  _Changes since **Stable 3815.2.1**_
  
  #### Security fixes:
