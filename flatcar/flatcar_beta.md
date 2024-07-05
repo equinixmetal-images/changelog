@@ -1,4 +1,14 @@
-# Changelog for flatcar_3913.1.0_beta
+# Changelog for flatcar_3975.1.1_beta
+ _Changes since **Beta 3975.1.0**_
+ 
+ #### Security fixes:
+ 
+ - openssh ([CVE-2024-6387](https://nvd.nist.gov/vuln/detail/CVE-2024-6387))
+ 
+ #### Updates:
+ 
+ - Linux ([6.6.36](https://lwn.net/Articles/979850))
+ - openssh ([9.7_p1](https://www.openssh.com/txt/release-9.7))# Changelog for flatcar_3913.1.0_beta
  _Changes since **Beta 3874.1.0**_
  
  #### Security fixes:
