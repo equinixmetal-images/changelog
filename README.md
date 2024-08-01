@@ -33,9 +33,9 @@ This is the list with latest details on the OSs Equinix Metal repackages and pub
 | Nixos                   | 22.05, 22.11 | June, 2023 | Alongside upstream      | TBD                                                | |
 | VMware ESXi             | 6.7   | Oct, 2022       | Aug, 2022  | N/A          | Not available on latest HW. No new images published. |
 | VMware ESXi             | 7.0   | Apr, 2025       | Jan, 2025  | TBD                                                               | |
-| Windows Server          | 2022  | Oct, 2026       |            | [x86_64](windows/x86_64/2022.md)                                  | |
-| Windows Server          | 2019  | Jan, 2024       | Sept, 2023 | [x86_64](windows/x86_64/2019.md)                                  | |
-| Talos                   | v1    | Rolling Release | N/A        | [x86_64](talos/v1.md) [arm64](talos/v1.md) | Available            | |
+| Windows Server          | 2022  | Oct, 2026       |            | [x86_64](windows%202022/windows_2022.md)                                  | |
+| Windows Server          | 2019  | Jan, 2024       | Sept, 2023 | [x86_64](windows%202019/windows_2019.md)                                  | |
+| Talos                   | v1    | Rolling Release | N/A        | [x86_64](talos/talos_v1.md) [arm64](talos/talos_v1.md) | Available | |
 | Flatcar Linux           |stable | Rolling release | N/A        | Rolling release                       | Available                 | |
 | Flatcar Linux           |beta   | Rolling release | N/A        | Rolling release                       | Available                 | |
 | FreeBSD                 | 13.2  | Jan, 2026       | Jan, 2026  | [x86_64](freebsd/x86_64/13_2.md) [arm64](freebsd/arm64/13_2.md)   | |
