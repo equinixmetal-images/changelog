@@ -31,12 +31,12 @@ This is the list with latest details on the OSs Equinix Metal repackages and pub
 | VMware ESXi             | 8.0   | TBA             | TBA        | TBA                                                               | |
 | VMware VCF              | 5.1   | TBA             | TBA        | TBA                                                               | |
 | Windows Server          | 2022  | Oct, 2026       |            | [x86_64](windows%202022/windows_2022.md)                          | |
-| Windows Server          | 2019  | Jan, 2024       | Sept, 2024 | [x86_64](windows%202019/windows_2019.md)                          | |
 | Flatcar Linux           | stable | Rolling release | N/A       | Rolling release                       | Available                 | |
 | Flatcar Linux           | beta  | Rolling release | N/A        | Rolling release                       | Available                 | |
 | FreeBSD                 | 13.2  | Jan, 2026       | Jan, 2026  | [x86_64](freebsd/x86_64/13_2.md) [arm64](freebsd/arm64/13_2.md)   | |
 | FreeBSD                 | 14.0  | Jan, 2029       | Jan, 2029  | [x86_64](freebsd/x86_64/14_0.md) [arm64](freebsd/arm64/14_0.md)   | |
-| VyOS                    | 1.4   | TBA             | TBA        | [1.4](vyos/vyos_1_4.md)                                           | |
+| VyOS                    | 1.3   | Rolling release | N/A        | [1.3](vyos/vyos_1_3.md)                                           | |
+| VyOS                    | 1.4   | Rolling release | N/A        | [1.4](vyos/vyos_1_4.md)                                           | |
 
 ## EOL Operating Systems
 
@@ -44,10 +44,11 @@ The following OSes have been officialy EOL'ed at Equinix Metal and are no longer
 
 | OS                      | Version |
 | ---                     | ---   |
-| CentOS                  | 7,8   |
+| CentOS                  | 7, 8  |
 | Debian                  | 10    |
 | NixOS                   | 22.05, 22.11, 23.05 |
 | RedHat Enterprise Linux | 7     |
-| Talos Linux             | 1 |
-| Ubuntu                  | 14.04,16.04,18.04 |
-| VMware ESXi             | 6.5,6.7 |
+| Talos Linux             | 1     |
+| Ubuntu                  | 14.04, 16.04, 18.04 |
+| VMware ESXi             | 6.5, 6.7 |
+| Windows Server          | 2019  |
