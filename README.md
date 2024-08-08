@@ -46,6 +46,8 @@ The following OSes have been officialy EOL'ed at Equinix Metal and are no longer
 | ---                     | ---   |
 | CentOS                  | 7,8   |
 | Debian                  | 10    |
+| NixOS                   | 22.05, 22.11, 23.05 |
 | RedHat Enterprise Linux | 7     |
+| Talos Linux             | 1 |
 | Ubuntu                  | 14.04,16.04,18.04 |
 | VMware ESXi             | 6.5,6.7 |
