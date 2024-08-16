@@ -20,6 +20,7 @@ This is the list with latest details on the OSs Equinix Metal repackages and pub
 | Ubuntu                  | 22.04 | Apr, 2032       | Jan, 2032  | [x86_64](ubuntu/x86_64/22_04.md) [arm64](ubuntu/aarch64/22_04.md) | |
 | Ubuntu                  | 24.04 | Apr, 2034       | Jan, 2034  | [x86_64](ubuntu/x86_64/24_04.md) [arm64](ubuntu/aarch64/24_04.md) | |
 | Debian                  | 11    | Jun, 2026       | Mar, 2026  | [x86_64](debian/x86_64/11.md) [arm64](debian/aarch64/11.md)       | |
+| Debian                  | 12    | Jun, 2028       | May, 2028  | [x86_64](debian/x86_64/12.md) [arm64](debian/aarch64/12.md)       | |
 | RedHat Enterprise Linux | 8     | May, 2024       | N/A        | [x86_64](rhel/x86_64/8.md)                                        | |
 | RedHat Enterprise Linux | 9     | TBA             | N/A        | [x86_64](rhel/x86_64/9.md)                                        | |
 | AlmaLinux OS            | 8     | May, 2024       | Feb, 2024  | [x86_64](alma/x86_64/8.md) [arm64](alma/aarch64/8.md)             | |
@@ -31,7 +32,6 @@ This is the list with latest details on the OSs Equinix Metal repackages and pub
 | VMware ESXi             | 8.0   | TBA             | TBA        | TBA                                                               | |
 | VMware VCF              | 5.1   | TBA             | TBA        | TBA                                                               | |
 | Windows Server          | 2022  | Oct, 2026       |            | [x86_64](windows%202022/windows_2022.md)                          | |
-| Talos                   | v1    | Rolling Release | N/A        | [x86_64](talos/talos_v1.md) [arm64](talos/talos_v1.md) | Available | |
 | Flatcar Linux           | stable | Rolling release | N/A       | Rolling release                       | Available                 | |
 | Flatcar Linux           | beta  | Rolling release | N/A        | Rolling release                       | Available                 | |
 | FreeBSD                 | 13.2  | Jan, 2026       | Jan, 2026  | [x86_64](freebsd/x86_64/13_2.md) [arm64](freebsd/arm64/13_2.md)   | |
