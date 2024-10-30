@@ -33,7 +33,6 @@ This is the list with latest details on the OSs Equinix Metal repackages and pub
 | VMware VCF               | 5.1     | TBA             | TBA        | TBA                                                               | |
 | Windows Server           | 2022    | Oct, 2026       |            | [x86_64](windows%202022/windows_2022.md)                          | |
 | Flatcar Linux            | stable  | Rolling release | N/A        | Rolling release                       | Available                 | |
-| Flatcar Linux            | beta    | Rolling release | N/A        | Rolling release                       | Available                 | |
 | FreeBSD                  | 13.2    | Jan, 2026       | Jan, 2026  | [x86_64](freebsd/x86_64/13_2.md) [arm64](freebsd/arm64/13_2.md)   | |
 | FreeBSD                  | 14.0    | Jan, 2029       | Jan, 2029  | [x86_64](freebsd/x86_64/14_0.md) [arm64](freebsd/arm64/14_0.md)   | |
 | VyOS                     | 1.3     | Rolling release | N/A        | [1.3](vyos/vyos_1_3.md)                                           | |
