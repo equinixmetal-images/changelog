@@ -23,18 +23,13 @@ This is the list with latest details on the OSs Equinix Metal repackages and pub
 | Debian                   | 12      | Jun, 2028       | May, 2028  | [x86_64](debian/x86_64/12.md) [arm64](debian/aarch64/12.md)       | |
 | Red Hat Enterprise Linux | 8       | May, 2024       | May 2029   | [x86_64](rhel/x86_64/8.md)                                        | |
 | Red Hat Enterprise Linux | 9       | May, 2027       | May 2032   | [x86_64](rhel/x86_64/9.md)                                        | |
-| AlmaLinux OS             | 8       | May, 2024       | Feb, 2024  | [x86_64](alma/x86_64/8.md) [arm64](alma/aarch64/8.md)             | |
-| AlmaLinux OS             | 9       | May, 2027       | Feb, 2027  | [x86_64](alma/x86_64/9.md) [arm64](alma/aarch64/9.md)             | |
 | Rocky Linux              | 8       | May, 2024       | Feb, 2024  | [x86_64](rocky/x86_64/8.md) [arm64](rocky/aarch64/8.md)           | |
 | Rocky Linux              | 9       | May, 2025       | Feb, 2025  | [x86_64](rocky/x86_64/9.md) [arm64](rocky/aarch64/9.md)           | |
-| Alpine                   | 3       | Rolling Release | N/A        | [x86_64](alpine/x86_64/3.md) [arm64](alpine/aarch64/3.md)         | |
 | VMware ESXi              | 7.0     | Apr, 2025       | Jan, 2025  | TBA                                                               | |
 | VMware ESXi              | 8.0     | TBA             | TBA        | TBA                                                               | |
 | VMware VCF               | 5.1     | TBA             | TBA        | TBA                                                               | |
 | Windows Server           | 2022    | Oct, 2026       |            | [x86_64](windows%202022/windows_2022.md)                          | |
 | Flatcar Linux            | stable  | Rolling release | N/A        | Rolling release                       | Available                 | |
-| FreeBSD                  | 13.2    | Jan, 2026       | Jan, 2026  | [x86_64](freebsd/x86_64/13_2.md) [arm64](freebsd/arm64/13_2.md)   | |
-| FreeBSD                  | 14.0    | Jan, 2029       | Jan, 2029  | [x86_64](freebsd/x86_64/14_0.md) [arm64](freebsd/arm64/14_0.md)   | |
 | VyOS                     | 1.3     | Rolling release | N/A        | [1.3](vyos/vyos_1_3.md)                                           | |
 | VyOS                     | 1.4     | Rolling release | N/A        | [1.4](vyos/vyos_1_4.md)                                           | |
 
@@ -44,8 +39,11 @@ The following OSes have been officialy EOL'ed at Equinix Metal and are no longer
 
 | OS                       | Version |
 | ---                      | ---  |
+| Alma Linux               | 8, 9 |
+| Alpine Linux             | 3    |
 | CentOS                   | 7, 8 |
 | Debian                   | 10   |
+| FreeBSD                  | 13, 14 |
 | NixOS                    | 22.05, 22.11, 23.05 |
 | Red Hat Enterprise Linux | 7    |
 | Talos Linux              | 1    |
