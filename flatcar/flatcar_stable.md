@@ -1,4 +1,11 @@
-# Changelog for flatcar_4152.2.0_stable
+# Changelog for flatcar_4152.2.1_stable
+_Changes since **Stable 4152.2.0**_
+
+ #### Security fixes:
+ - openssh ([CVE-2025-26465](https://nvd.nist.gov/vuln/detail/CVE-2025-26465), [CVE-2025-26466](https://nvd.nist.gov/vuln/detail/CVE-2025-26466))
+ 
+ #### Updates:
+ - openssh(9.8_p1-r4)# Changelog for flatcar_4152.2.0_stable
  _Changes since **Stable 4081.2.1**_
  
  #### Security fixes:
